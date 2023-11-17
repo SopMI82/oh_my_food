@@ -6,24 +6,27 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,700&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="stylesheet_index.css">
+        <link rel="stylesheet" href="assets/stylesheet_index.css">
         <script src="https://kit.fontawesome.com/3f75339eca.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <h1>ohmyfood</h1>
-            <p><i class="fa-solid fa-location-dot"></i>Paris, Bellevile</p>
+            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
+            <div class="localisation">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Paris, Bellevile</p>
+            </div>
         </header>
         <Main>
             <section class="search">
-                <H2>Réservez le menu qui vous convient</H2>
+                <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                 <button>Explorer nos restaurants</button>
             </section>
             <section class="howto">
-                <h2></h2>
-                <div>
-                    <p>1</p>
+                <h1>Fonctionnement</h1>
+                <div class="card_explain">
+                    <p class="number_box">1</p>
                     <div>
                         <p><i class="fa-solid fa-mobile-screen-button"></i></p>
                         <h4>Choisissez un restaurant</h4>
@@ -45,10 +48,10 @@
                 </div>
             </section>
             <section class="restaurants">
-                <h2>Restaurants</h2>
-                <a href="menu_palette_du_gout.html">
+                <h1>Restaurants</h1>
+                <a href="restaurants/menu_palette_du_gout.html">
                     <div class="card_link">
-                        <div class="photo"><img src="/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût"><button class="button_new">Nouveau</button></div>
+                        <div class="photo"><img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût"><button class="button_new">Nouveau</button></div>
                         <div class="infos">
                             <div class="info_text">
                                 <h3>La palette du goût</h3>
@@ -62,7 +65,7 @@
             </section>
         </Main>
         <Footer>
-            <h1>ohmyfood</h1>
+            <img src="assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
             <menu>
                 <ul>
                     <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
