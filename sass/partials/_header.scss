@@ -1,0 +1,23 @@
+.header{
+    width: 100%;   
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    .header-logo{
+        width: 600px;
+    }
+
+    .header-location{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        color: $footer-bg-color;
+        p{
+            margin: 0;
+        }
+        
+    }
+}
