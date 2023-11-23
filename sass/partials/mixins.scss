@@ -1,0 +1,21 @@
+@mixin button--fantasy {
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    background: linear-gradient(to top, $third-color, $second-color);
+    color: #ffffff;
+    height: 50px;
+    width: fit-content;
+    font-size: 16px;
+    padding: 0 25px ;
+    border: none;
+    border-radius: 25px;
+    align-self: center;
+}
+
+@mixin ombrage-soft{
+    box-shadow: 0px 4px 10px 0px #0000001A;
+}
+
+@mixin ombrage-medium{
+    box-shadow: 0px 4px 15px 0px #0000001A;
+}
+

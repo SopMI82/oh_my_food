@@ -1,0 +1,11 @@
+.use-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    div{
+        display: flex;
+        width: 80%;
+        background-color: $light-grey;
+    }
+}

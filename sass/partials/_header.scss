@@ -1,4 +1,10 @@
-.header{
+$first-color: #9356dc;
+$second-color: #ff79da;
+$third-color: #99e2d0;
+$dark-grey: #353535;
+$middle-grey: #eaeaea;
+
+header{
     width: 100%;   
     box-sizing: border-box;
     display: flex;
@@ -7,16 +13,26 @@
     margin: auto;
 
     .header-logo{
-        width: 600px;
+        width: 200px;
+        padding: 20px;
     }
 
     .header-location{
         width: 100%;
         display: flex;
         flex-direction: row;
-        color: $footer-bg-color;
-        p{
-            margin: 0;
+        justify-content: center;
+        color: $dark-grey;
+        padding: 20px 0;
+        gap: 17px;
+        background-color: $middle-grey;
+        align-items: baseline;
+
+        input{
+            width: 120px;
+            height: 25px;
+            border: none;
+            background-color: $middle-grey;
         }
         
     }

@@ -1,5 +1,8 @@
 body {
     font-family: 'roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
 }
 
 .fa-solid{
@@ -12,6 +15,30 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
+    text-align: center;
+}
+
+.section-bgd{
+    background-color: $light-grey;
+}
+
+section{
+    padding: 35px 0 45px;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+img{
+    width: 100%;
 }
 
 a{
@@ -26,4 +53,9 @@ ul{
 li{
     list-style-type: none;
     padding-bottom: 3px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
 }
