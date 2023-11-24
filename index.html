@@ -21,47 +21,52 @@
             <section class="intro section-bgd">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                <button class="button-fantasy">Explorer nos restaurants</button>
+                <a href="#restaurants"><button class="button-fantasy">Explorer nos restaurants</button></a>
             </section>
             <section class="howto">
                 <h1>Fonctionnement</h1>
                 <div class="use-card">
-                    <p class="number_box">1</p>
+                    <p class="number-box">1</p>
                     <div>
                         <p><i class="fa-solid fa-mobile-screen-button"></i></p>
                         <h4>Choisissez un restaurant</h4>
                     </div>
                 </div>
                 <div class="use-card">
-                    <p class="number_box">2</p>
+                    <p class="number-box">2</p>
                     <div>
                         <p><i class="fa-solid fa-list-ul"></i></p>
                         <h4>Composez votre menu</h4>
                     </div>
                 </div>
                 <div class="use-card">
-                    <p class="number_box">3</p>
+                    <p class="number-box">3</p>
                     <div>
                         <p><i class="fa-solid fa-store"></i></p>
                         <h4>Dégustez au restaurant</h4>
                     </div>
                 </div>
             </section>
-            <section class="restaurants section-bgd">
+            <section id="restaurants" class="section-bgd">
                 <h1>Restaurants</h1>
-                <div class="restaurant-card">
                     <a href="restaurants/menu_palette_du_gout.html">
-                        <div class="photo"><img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût"><button class="button_new">Nouveau</button></div>
-                        <div class="infos">
-                            <div class="info_text">
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p> 
+                        <article class="restaurant-card">
+                            <div class="card-img">
+                                <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût">
+                                <button class="button-new">Nouveau</button>
                             </div>
-                            <button><i class="fa-regular fa-heart"></i></button>
-                            <button><i class="fa-solid fa-heart"></i></button>
-                        </div>
+                            <div class="card-content">
+                                <div class="card-txt">
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p> 
+                                </div>
+                                <div class="card-rate">
+                                    <button><i class="fa-regular fa-heart"></i></button>
+                                    <button><i class="fa-solid fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </article>
                     </a>
-                </div>
             </section>
         </main>
         <footer>

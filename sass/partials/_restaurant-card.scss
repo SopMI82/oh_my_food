@@ -1,0 +1,40 @@
+.restaurant-card{
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    overflow: hidden;
+    justify-content: space-between;
+
+
+    .card-img{
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        height: 170px;
+        overflow: hidden;
+        position: relative;      
+
+            img{
+                width: 100%;
+                box-sizing: border-box;
+                position: absolute;
+                left: 0;
+                top: -120px;
+
+            }
+    }
+
+    .card-content{
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+            h3, p{
+                margin: 0;
+            }
+    }
+}

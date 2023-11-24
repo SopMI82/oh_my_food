@@ -7,6 +7,8 @@ body {
 
 .fa-solid{
     padding: 0 10px 0 0;
+    font-size: 25px;
+    color: $dark-grey;
   }
 
 .main-container{
@@ -14,16 +16,20 @@ body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 0;
     text-align: center;
 }
 
+
+
 .section-bgd{
     background-color: $light-grey;
+    margin: 0;
+
 }
 
 section{
-    padding: 35px 0 45px;
+    padding: 35px 0 45px 0;
 }
 
 h1{
@@ -35,10 +41,6 @@ h1{
 p{
     font-size: 18px;
     font-weight: 300;
-}
-
-img{
-    width: 100%;
 }
 
 a{

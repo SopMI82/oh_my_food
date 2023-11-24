@@ -1,11 +1,33 @@
 .use-card{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    .number-box{
+        width: 24px;
+        height: 24px;
+        margin: 0 0 0 20px;
+        background-color: $first-color;
+        border-radius: 12px;
+        position: absolute;
+        z-index: 2;
+        color: $white;
+        font-size: 16px;
+        font-weight: 500;
+    }
 
     div{
         display: flex;
-        width: 80%;
+        width: 90%;
         background-color: $light-grey;
+        border-radius: 20px;
+        margin: 15px 15px 15px 30px;
+        padding-left: 40px;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+
+        @include ombrage-medium
     }
 }

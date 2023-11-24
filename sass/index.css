@@ -7,6 +7,8 @@ body {
 
 .fa-solid {
   padding: 0 10px 0 0;
+  font-size: 25px;
+  color: #353535;
 }
 
 .main-container {
@@ -14,16 +16,17 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0;
   text-align: center;
 }
 
 .section-bgd {
   background-color: #f6f6f6;
+  margin: 0;
 }
 
 section {
-  padding: 35px 0 45px;
+  padding: 35px 0 45px 0;
 }
 
 h1 {
@@ -34,10 +37,6 @@ h1 {
 p {
   font-size: 18px;
   font-weight: 300;
-}
-
-img {
-  width: 100%;
 }
 
 a {
@@ -90,7 +89,7 @@ header .header-location input {
 }
 
 .button-fantasy {
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
   background: linear-gradient(to top, #9356dc, #ff79da);
   color: #ffffff;
   height: 50px;
@@ -101,18 +100,73 @@ header .header-location input {
   border: none;
   border-radius: 25px;
   align-self: center;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
 .use-card {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.use-card .number-box {
+  width: 24px;
+  height: 24px;
+  margin: 0 0 0 20px;
+  background-color: #9356dc;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
 }
 .use-card div {
   display: flex;
-  width: 80%;
+  width: 90%;
   background-color: #f6f6f6;
+  border-radius: 20px;
+  margin: 15px 15px 15px 30px;
+  padding-left: 40px;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.restaurant-card {
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.restaurant-card .card-img {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+}
+.restaurant-card .card-img img {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: -120px;
+}
+.restaurant-card .card-content {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+}
+.restaurant-card .card-content h3, .restaurant-card .card-content p {
+  margin: 0;
 }
 
 footer {
@@ -135,4 +189,8 @@ footer .info .info-liens a {
   color: #fff;
   font-size: 16px;
   gap: 7px;
+}
+footer .info .fa-solid {
+  font-size: 18px;
+  color: #ffffff;
 }/*# sourceMappingURL=index.css.map */
