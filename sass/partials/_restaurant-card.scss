@@ -6,10 +6,8 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 15px;
     overflow: hidden;
     justify-content: space-between;
-
 
     .card-img{
         width: 100%;
@@ -21,11 +19,8 @@
 
             img{
                 width: 100%;
+                object-fit: cover;
                 box-sizing: border-box;
-                position: absolute;
-                left: 0;
-                top: -120px;
-
             }
     }
 
