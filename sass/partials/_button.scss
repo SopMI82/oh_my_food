@@ -30,43 +30,33 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    right: 20px;
+    justify-content: center;
 
     .fa-heart{
-        @include tall;
+        font-size: 2em;
+        padding: 0;
+    }
+
+    .fa-solid{
+        color: transparent;
+        background-image: linear-gradient($second-color, $first-color);
+        background-clip: text;
+    }
+
+    .fa-regular{
+        background-color: $white;
     }
 
     input{
         display: none;
         position: absolute;
-        right: 15px;
-        z-index: 1;
-        animation: empty__heart 500ms forwards;
-
-
-        .fa-regular{
-            background-color: $white;
-            display: block;
-        }
-
-    //    .fa-regular:hover{
-   //     }
-    //}
+        animation: checked empty__heart 500ms forwards;
+    }
 
     button{
         border: none;
         background-color: $white;
         position: absolute;
-        right: 15px;
-        z-index: 1;
-
-
-
-
-        .fa-solid{
-            color: transparent;
-            background-image: linear-gradient($second-color, $first-color);
-            background-clip: text;
-        }
     }
 }
-

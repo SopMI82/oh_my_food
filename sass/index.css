@@ -147,33 +147,31 @@ header .header-location input {
   display: flex;
   flex-direction: column;
   position: relative;
+  right: 20px;
+  justify-content: center;
 }
 .card-rate .fa-heart {
-  font-size: 1.4em;
+  font-size: 2em;
+  padding: 0;
+}
+.card-rate .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.card-rate .fa-regular {
+  background-color: #ffffff;
 }
 .card-rate input {
   display: none;
   position: absolute;
-  right: 15px;
-  z-index: 1;
-  animation: empty__heart 500ms forwards;
-}
-.card-rate input .fa-regular {
-  background-color: #ffffff;
-  display: block;
+  animation: checked empty__heart 500ms forwards;
 }
 .card-rate button {
   border: none;
   background-color: #ffffff;
   position: absolute;
-  right: 15px;
-  z-index: 2;
-}
-.card-rate button .fa-solid {
-  color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
 }
 
 .use-card {
