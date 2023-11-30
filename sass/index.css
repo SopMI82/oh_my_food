@@ -126,6 +126,56 @@ header .header-location input {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
+.button-new {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  color: #008766;
+  border: none;
+  border-radius: 3px;
+  line-height: 30px;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.card-rate {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card-rate .fa-heart {
+  font-size: 1.4em;
+}
+.card-rate input {
+  display: none;
+  position: absolute;
+  right: 15px;
+  z-index: 1;
+  animation: empty__heart 500ms forwards;
+}
+.card-rate input .fa-regular {
+  background-color: #ffffff;
+  display: block;
+}
+.card-rate button {
+  border: none;
+  background-color: #ffffff;
+  position: absolute;
+  right: 15px;
+  z-index: 2;
+}
+.card-rate button .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
 .use-card {
   display: flex;
   flex-direction: row;
@@ -173,13 +223,21 @@ header .header-location input {
   justify-content: space-between;
 }
 .restaurant-card .card-img {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   box-sizing: border-box;
+  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
   height: 170px;
   overflow: hidden;
   position: relative;
 }
 .restaurant-card .card-img img {
+  display: none;
+  position: absolute;
+  z-index: 0;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -206,31 +264,6 @@ header .header-location input {
   font-weight: 300;
   color: #000000;
   text-align: start;
-}
-.restaurant-card .card-content .card-rate button {
-  border: none;
-  background-color: #ffffff;
-}
-.restaurant-card .card-content .card-rate button .fa-heart {
-  font-size: 1.4em;
-}
-.restaurant-card .card-content .card-rate button .fa-regular {
-  background-color: #ffffff;
-  display: block;
-  position: absolute;
-  z-index: 1;
-}
-.restaurant-card .card-content .card-rate button .fa-regular:hover {
-  animation: empty__heart 500ms forwards;
-}
-.restaurant-card .card-content .card-rate button .fa-solid {
-  color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  -webkit-background-clip: text;
-          background-clip: text;
-  position: relative;
-  left: -16px;
-  top: 16px;
 }
 
 footer {

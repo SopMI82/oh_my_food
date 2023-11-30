@@ -9,49 +9,63 @@
 .button-new{
     display: flex;
     position: absolute;
-    top: 60px;
+    top: 20px;
+    right: 20px;
     z-index: 1;
     width: 80px;
     height: 30px;
     background-color: $third-color;
     color: $nouveau;
-    border-radius: 2px;
+    border: none;
+    border-radius: 3px;
+    line-height: 30px;
+    justify-content: center;
+    @include fat;
 }
 
 
 
 //bouton coeur
 .card-rate{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .fa-heart{
+        @include tall;
+    }
 
     input{
         display: none;
-    }
+        position: absolute;
+        right: 15px;
+        z-index: 1;
+        animation: empty__heart 500ms forwards;
+
+
         .fa-regular{
             background-color: $white;
             display: block;
-            position: absolute;
-            z-index: 1;
         }
 
-        .fa-regular:hover{
-            animation: empty__heart 500ms forwards;
-        }
+    //    .fa-regular:hover{
+   //     }
+    //}
 
     button{
         border: none;
         background-color: $white;
+        position: absolute;
+        right: 15px;
+        z-index: 1;
 
-        .fa-heart{
-            @include tall;
-        }
+
+
 
         .fa-solid{
             color: transparent;
             background-image: linear-gradient($second-color, $first-color);
             background-clip: text;
-            position: relative;
-            left: -16px;
-            top: 16px;
         }
     }
 }
