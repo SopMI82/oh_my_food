@@ -48,16 +48,28 @@
                     border: none;
                     background-color: $white;
                     .fa-heart{
-                        font-size: 1.8em;
+                        @include tall;
                     }
+
                     .fa-regular{
+                        background-color: $white;
                         display: block;
+                        position: absolute;
+                        z-index: 1;
                     }
+
+                    .fa-regular:hover{
+                        animation: empty__heart 500ms forwards;
+                    }
+
+
                     .fa-solid{
                         color: transparent;
                         background-image: linear-gradient($second-color, $first-color);
                         background-clip: text;
-                        display: none;
+                        position: relative;
+                        left: -16px;
+                        top: 16px;
                     }
                 }
             }

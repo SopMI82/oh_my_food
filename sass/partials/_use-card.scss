@@ -15,8 +15,8 @@
         border-radius: 12px;
         z-index: 2;
         color: $white;
-        font-size: 16px;
-        font-weight: 500;
+        @include small;
+        @include fat;
     }
 
     div{
@@ -29,7 +29,10 @@
         gap: 20px;
         position: relative;
         z-index: 1;
+        @include ombrage-medium;
 
-        @include ombrage-medium
+        .fa-solid:hover{
+            animation: color-change 300ms forwards;
+        }
     }
 }

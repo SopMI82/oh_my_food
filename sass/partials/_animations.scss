@@ -1,0 +1,18 @@
+@keyframes empty__heart {
+    0% {
+        opacity: 1;
+        
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes color-change {
+    from {
+        color: $dark-grey;
+}
+    to {
+        color: $first-color;
+    }
+}

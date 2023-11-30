@@ -1,13 +1,29 @@
+@keyframes empty__heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes color-change {
+  from {
+    color: #353535;
+  }
+  to {
+    color: #9356dc;
+  }
+}
 body {
-  font-family: "roboto", sans-serif;
-  font-size: 16px;
+  font-family: Roboto;
   font-weight: 500;
+  font-size: 1em;
   margin: 0;
 }
 
 .fa-solid {
   padding: 0 10px 0 0;
-  font-size: 25px;
+  font-size: 1.4em;
   color: #353535;
 }
 
@@ -34,13 +50,17 @@ section {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.4em;
   font-weight: 700;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: 300;
+}
+
+h4 {
+  font-size: 1em;
 }
 
 a {
@@ -122,8 +142,8 @@ header .header-location input {
   border-radius: 12px;
   z-index: 2;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1em;
+  font-weight: 700;
 }
 .use-card div {
   display: flex;
@@ -136,6 +156,9 @@ header .header-location input {
   position: relative;
   z-index: 1;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.use-card div .fa-solid:hover {
+  animation: color-change 300ms forwards;
 }
 
 .restaurant-card {
@@ -189,17 +212,25 @@ header .header-location input {
   background-color: #ffffff;
 }
 .restaurant-card .card-content .card-rate button .fa-heart {
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 .restaurant-card .card-content .card-rate button .fa-regular {
+  background-color: #ffffff;
   display: block;
+  position: absolute;
+  z-index: 1;
+}
+.restaurant-card .card-content .card-rate button .fa-regular:hover {
+  animation: empty__heart 500ms forwards;
 }
 .restaurant-card .card-content .card-rate button .fa-solid {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
-  display: none;
+  position: relative;
+  left: -16px;
+  top: 16px;
 }
 
 footer {
@@ -210,9 +241,8 @@ footer {
 }
 footer h1 {
   font-family: Shrikhand;
-  font-size: 24px;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4em;
   color: #ffffff;
 }
 footer .info {
@@ -227,10 +257,10 @@ footer .info .info-logo {
 footer .info .info-liens a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 1em;
   gap: 7px;
 }
 footer .info .fa-solid {
-  font-size: 18px;
+  font-size: 1.2em;
   color: #ffffff;
 }/*# sourceMappingURL=index.css.map */
