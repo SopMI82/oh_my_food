@@ -10,6 +10,8 @@
     justify-content: space-between;
 
     .card-img{
+        display: flex;
+        flex-direction: row;
         width: 100%;
         box-sizing: border-box;
         height: 170px;
@@ -17,6 +19,9 @@
         position: relative;
 
             img{
+                display: none;
+                position: absolute;
+                z-index: 0;
                 width: 100%;
                 object-fit: cover;
                 box-sizing: border-box;
@@ -43,35 +48,6 @@
                 color: $black;
                 text-align: start;
             }
-            .card-rate{
-                button{
-                    border: none;
-                    background-color: $white;
-                    .fa-heart{
-                        @include tall;
-                    }
-
-                    .fa-regular{
-                        background-color: $white;
-                        display: block;
-                        position: absolute;
-                        z-index: 1;
-                    }
-
-                    .fa-regular:hover{
-                        animation: empty__heart 500ms forwards;
-                    }
-
-
-                    .fa-solid{
-                        color: transparent;
-                        background-image: linear-gradient($second-color, $first-color);
-                        background-clip: text;
-                        position: relative;
-                        left: -16px;
-                        top: 16px;
-                    }
-                }
-            }
+// pour le coeur voir page button
     }
 }

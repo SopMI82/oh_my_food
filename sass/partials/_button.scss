@@ -1,4 +1,58 @@
+
+// bouton dégradé
 .button-fantasy{
     @include button--fantasy;
     @include ombrage-soft;
 }
+
+//bouton "nouveau"
+.button-new{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    z-index: 1;
+    width: 80px;
+    height: 30px;
+    background-color: $third-color;
+    color: $nouveau;
+    border-radius: 2px;
+}
+
+
+
+//bouton coeur
+.card-rate{
+
+    input{
+        display: none;
+    }
+        .fa-regular{
+            background-color: $white;
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .fa-regular:hover{
+            animation: empty__heart 500ms forwards;
+        }
+
+    button{
+        border: none;
+        background-color: $white;
+
+        .fa-heart{
+            @include tall;
+        }
+
+        .fa-solid{
+            color: transparent;
+            background-image: linear-gradient($second-color, $first-color);
+            background-clip: text;
+            position: relative;
+            left: -16px;
+            top: 16px;
+        }
+    }
+}
+
