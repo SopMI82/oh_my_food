@@ -32,6 +32,12 @@ section{
     padding: 35px 0 45px 0;
 }
 
+.restaurant-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
 h1{
     @include tall;
     @include fat;

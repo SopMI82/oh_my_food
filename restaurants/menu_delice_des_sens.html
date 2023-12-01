@@ -2,31 +2,57 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Ohmyfood/menu du restaurant Le délice des sens</title>
+        <title>Ohmyfood - Le délice des Sens</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,700&family=Shrikhand&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="stylesheet_menu.css">
+        <link rel="stylesheet" href="../sass/index.css">
         <script src="https://kit.fontawesome.com/3f75339eca.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header>
-            <nav><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></nav>
-            <h1>ohmyfood</h1>
+        <header class="menu-header">
+            <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <img class="header-logo" src="../assets/images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood">
         </header>
-        <Main>
+        <main class="restaurant">
+            <div class="ledelicedessens">
+            </div>
+            <div class="main-course">
+                <div class="restaurant-info">
+                    <h1>Le délice des sens</h1>
+                    <div class="card-rate">
+                        <input type="checkbox" value="loved" name="loved">
+                        <label for="loved"><i class="fa-regular fa-heart"></i></label>
+                        <button><i class="fa-solid fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="restaurant-menu">
+                    <h2>Entrées</h2>
+                    <div class="style-bar"></div>
+                    <div class="card-choice">
+                        <div class="choice-text">
+                            <h3>Tartare de thon</h3>
+                            <p>Assaisonné au Yuzu</p>
+                        </div>
+                        <div class="choice-price">25 €</div>
+                        <div class="selected"><i class="fa-solid fa-check"></i></div>
+                    </div>
 
-        </Main>
-        <Footer>
-            <h1>ohmyfood</h1>
-            <menu>
-                <ul>
-                    <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                    <li><i class="fa-solid fa-handshake-angle"></i>Devenir Partenaire</li>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
+                </div>
+            </div>
+
+
+        </main>
+        <footer>
+            <div class="info">
+                <h1>ohmyfood</h1>
+                <ul class="info-liens">
+                    <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                    <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir Partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-            </menu>
-        </Footer>
+            </div>
+        </footer>
     </body>
 </html>

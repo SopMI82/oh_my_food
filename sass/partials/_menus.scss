@@ -1,0 +1,98 @@
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .fa-solid{
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+}
+
+.restaurant{
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+}
+
+.main-course{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 220px;
+    background-color: $light-grey;
+    border-radius: 40px 40px 0 0;
+    padding: 20px 15px 20px 15px;
+
+    .restaurant-info{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        h1{
+            display: block;
+            font-family: $txt-fantasy;
+            @include tall;
+            font-weight: 500;
+        }
+    }
+
+    .restaurant-menu{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    
+        h2{
+            font-family: $txt-main;
+            @include small;
+            @include thin;
+            text-transform: uppercase;
+        }
+
+        .style-bar{
+            width: 40px;
+            height: 3px;
+            background-color: $nouveau;
+        }
+    }
+}
+
+.card-choice{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+
+    .choice-text{
+        width: 80%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        h3, p{
+            margin: 0;
+        }
+    }
+
+    .choice-price{
+        line-height: 100%;
+        vertical-align: bottom;
+    }
+
+    .selected{
+
+    }
+}
+
+
