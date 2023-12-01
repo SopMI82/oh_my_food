@@ -49,13 +49,14 @@ flex-direction: column;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     
         h2{
             font-family: $txt-main;
             @include small;
             @include thin;
             text-transform: uppercase;
+            margin: 0;
         }
 
         .style-bar{
@@ -68,31 +69,55 @@ flex-direction: column;
 
 .card-choice{
     width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
+    height: 70px;
 
-    .choice-text{
-        width: 80%;
+    border-radius: 15px;
+    @include ombrage-medium;
+    overflow: hidden;
+
+    .card-choice-extend{
+        width: 120%;
+        height: 70px;
         box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        h3, p{
-            margin: 0;
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+        align-items: center;
+        background-color: $white;
+        border-radius: 15px;
+            
+        .choice-text{
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            gap: 5px;
+            h3, p{
+                margin: 0;
+            }
+        }
+
+        .choice-price{
+            padding-bottom: 15px;
+            align-self: flex-end;
+            text-align: center;
+        }
+
+        .selected{
+            height: 70px;
+            background-color: $third-color;
+            border-radius: 0 15px 15px 0;
+            text-align: center;
+            
+
+            .fa-solid{
+                color: $nouveau;
+                line-height: 70px;
+            }
         }
     }
-
-    .choice-price{
-        line-height: 100%;
-        vertical-align: bottom;
+    .card-choice-extend:hover{
+        width: 100%;
     }
 
-    .selected{
-
-    }
 }
 
 

@@ -383,13 +383,14 @@ footer .info .fa-solid {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 .main-course .restaurant-menu h2 {
   font-family: Roboto;
   font-size: 1em;
   font-weight: 300;
   text-transform: uppercase;
+  margin: 0;
 }
 .main-course .restaurant-menu .style-bar {
   width: 40px;
@@ -399,23 +400,45 @@ footer .info .fa-solid {
 
 .card-choice {
   width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 15px;
+  height: 70px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  overflow: hidden;
 }
-.card-choice .choice-text {
-  width: 80%;
+.card-choice .card-choice-extend {
+  width: 120%;
+  height: 70px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.card-choice .card-choice-extend .choice-text {
   display: flex;
   flex-direction: column;
+  padding-left: 15px;
   gap: 5px;
 }
-.card-choice .choice-text h3, .card-choice .choice-text p {
+.card-choice .card-choice-extend .choice-text h3, .card-choice .card-choice-extend .choice-text p {
   margin: 0;
 }
-.card-choice .choice-price {
-  line-height: 100%;
-  vertical-align: bottom;
+.card-choice .card-choice-extend .choice-price {
+  padding-bottom: 15px;
+  align-self: flex-end;
+  text-align: center;
+}
+.card-choice .card-choice-extend .selected {
+  height: 70px;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+}
+.card-choice .card-choice-extend .selected .fa-solid {
+  color: #008766;
+  line-height: 70px;
+}
+.card-choice .card-choice-extend:hover {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
