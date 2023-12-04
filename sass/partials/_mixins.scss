@@ -47,16 +47,3 @@
 @mixin fat{
     font-weight: 700;
 }
-
-@mixin photo-card{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center;
-    height: 170px;
-    overflow: hidden;
-    position: relative;
-
-}

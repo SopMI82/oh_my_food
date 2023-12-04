@@ -134,9 +134,9 @@ header .header-location input {
 
 .button-new {
   display: flex;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: relative;
+  top: 10px;
+  right: 80px;
   z-index: 1;
   width: 80px;
   height: 30px;
@@ -212,58 +212,6 @@ header .header-location input {
   animation: color-change 300ms forwards;
 }
 
-.lapalettedugout {
-  background-image: url("../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  height: 170px;
-  overflow: hidden;
-  position: relative;
-}
-
-.lanoteenchantee {
-  background-image: url("../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  height: 170px;
-  overflow: hidden;
-  position: relative;
-}
-
-.alafrancaise {
-  background-image: url("../assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  height: 170px;
-  overflow: hidden;
-  position: relative;
-}
-
-.ledelicedessens {
-  background-image: url("../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  box-sizing: border-box;
-  background-size: cover;
-  background-position: center;
-  height: 170px;
-  overflow: hidden;
-  position: relative;
-}
-
 .restaurant-card {
   width: 100%;
   height: 250px;
@@ -274,6 +222,19 @@ header .header-location input {
   flex-direction: column;
   overflow: hidden;
   justify-content: space-between;
+}
+.restaurant-card .photo {
+  width: 100%;
+  max-height: 275px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.restaurant-card .photo img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
 }
 .restaurant-card .card-content {
   height: 70px;
@@ -348,12 +309,13 @@ footer .info .fa-solid {
   display: flex;
   flex-direction: column;
 }
-.restaurant .ledelicedessens2 {
+.restaurant .photo {
   width: 100%;
   max-height: 275px;
   overflow: hidden;
+  margin-bottom: -40px;
 }
-.restaurant .ledelicedessens2 img {
+.restaurant .photo img {
   width: 100%;
   height: auto;
 }
@@ -365,7 +327,6 @@ footer .info .fa-solid {
   flex-direction: column;
   position: relative;
   z-index: 1;
-  top: 220px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
   padding: 20px 15px 20px 15px;
