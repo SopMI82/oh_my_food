@@ -28,36 +28,29 @@
 
 //bouton coeur
 .card-rate{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right: 20px;
-    justify-content: center;
-
-    .fa-heart{
-        font-size: 2em;
-        padding: 0;
-    }
-
-    .fa-solid{
-        color: transparent;
-        background-image: linear-gradient($second-color, $first-color);
-        background-clip: text;
-    }
-
-    .fa-regular{
-        background-color: $white;
-    }
-
-    input{
-        display: none;
-        position: absolute;
-        animation: checked empty__heart 500ms forwards;
-    }
-
     button{
         border: none;
         background-color: $white;
-        position: absolute;
+        .fa-heart{
+            font-size: 2em;
+        }
+        .fa-regular{
+            background-color: $white;
+            display: block;
+            position: absolute;
+            z-index: 1;
+        }
+        .fa-regular:hover{
+            animation: empty__heart 500ms forwards;
+        }
+        .fa-solid{
+            color: transparent;
+            background-image: linear-gradient($second-color, $first-color);
+            background-clip: text;
+            display: block;
+            position: relative;
+            left: -16px;
+            top: 22px;
+        }
     }
 }

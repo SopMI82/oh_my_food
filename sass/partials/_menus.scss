@@ -42,7 +42,15 @@ flex-direction: column;
             @include tall;
             font-weight: 500;
         }
-    }
+
+        .card-rate{
+            button{
+                background-color: $light-grey;
+                .fa-regular{
+                    background-color: $light-grey;
+                }
+            }
+        }
 
     .restaurant-menu{
         width: 100%;
@@ -117,7 +125,5 @@ flex-direction: column;
     .card-choice-extend:hover{
         width: 100%;
     }
-
 }
-
-
+}
