@@ -3,6 +3,7 @@
 .button-fantasy{
     @include button--fantasy;
     @include ombrage-soft;
+    margin: 25px auto;
 }
 
 //bouton "nouveau"
