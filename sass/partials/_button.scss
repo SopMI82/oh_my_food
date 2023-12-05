@@ -25,49 +25,44 @@
     @include ombrage-soft;
 }
 
-
-
 //bouton coeur
-.card-rate{
+.card-rate {
     display: flex;
-    flex-direction: row;
     position: relative;
+    right: 2em;
+    align-self: center;
     width: 30px;
     height: 30px;
-    padding: 10px 40px 0 0;
-
-    button{
-        border: none;
-        background-color: $white;
-
-        .fa-heart{
+    
+    button {
+    border: none;
+    position: relative;
+    align-self: center;
+    background-color: $white;
+    padding: 0;
+    
+        .fa-heart {
             font-size: 2em;
         }
-        .fa-regular{
+    
+        .fa-regular {
+            display:flex;
+            position :absolute;
             background-color: $white;
+            z-index:1;
+            opacity: 1;
+            transition: opacity 0.4s;
         }
+    
         .fa-regular:hover{
-            animation: empty__heart 500ms forwards;
+            opacity:0;
         }
-        .fa-solid{
+    
+        .fa-solid {
+            display:flex;
             color: transparent;
-            background-image: linear-gradient($second-color, $first-color);
+            background-image: linear-gradient($second-color,$first-color);
             background-clip: text;
-            padding: 0;
         }
-    }
-/* Astuce pour superposer les 2 boutons*/
-    .heart{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .empty{
-        z-index: 1;
-    }
-
-    .empty:hover{
-        animation: empty__heart 500ms forwards;
     }
 }

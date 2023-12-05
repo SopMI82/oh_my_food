@@ -154,42 +154,39 @@ header .header-location input {
 
 .card-rate {
   display: flex;
-  flex-direction: row;
   position: relative;
+  right: 2em;
+  align-self: center;
   width: 30px;
   height: 30px;
-  padding: 10px 40px 0 0;
 }
 .card-rate button {
   border: none;
+  position: relative;
+  align-self: center;
   background-color: #ffffff;
+  padding: 0;
 }
 .card-rate button .fa-heart {
   font-size: 2em;
 }
 .card-rate button .fa-regular {
+  display: flex;
+  position: absolute;
   background-color: #ffffff;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 .card-rate button .fa-regular:hover {
-  animation: empty__heart 500ms forwards;
+  opacity: 0;
 }
 .card-rate button .fa-solid {
+  display: flex;
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
-  padding: 0;
-}
-.card-rate .heart {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.card-rate .empty {
-  z-index: 1;
-}
-.card-rate .empty:hover {
-  animation: empty__heart 500ms forwards;
 }
 
 .use-card {
