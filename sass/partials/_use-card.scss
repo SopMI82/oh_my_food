@@ -4,7 +4,6 @@
     justify-content: flex-start;
     align-items: center;
 
-
     .number-box{
         width: 24px;
         height: 24px;
@@ -31,8 +30,14 @@
         z-index: 1;
         @include ombrage-medium;
 
-        .fa-solid:hover{
-            animation: color-change 300ms forwards;
+        .fa-solid{
+            color: $dark-grey;
+            transition: color 0.4s;
         }
+
+        &:hover .fa-solid{
+            color: $first-color;
+        }
+        
     }
 }

@@ -2,7 +2,7 @@
 // bouton dégradé
 .button-fantasy{
     @include button--fantasy;
-    @include ombrage-soft;
+    @include ombrage-medium;
     margin: 25px auto;
 }
 

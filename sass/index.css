@@ -1,19 +1,21 @@
-@keyframes empty__heart {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+/*@keyframes empty__heart {
+    0% {
+        opacity: 1;
+
+    }
+    100%{
+        opacity: 0;
+    }
 }
-@keyframes color-change {
-  from {
-    color: #353535;
-  }
-  to {
-    color: #9356dc;
-  }
+*/
+/*@keyframes color-change {
+    from {
+        color: $dark-grey;
 }
+    to {
+        color: $first-color;
+    }
+}*/
 body {
   font-family: Roboto;
   font-weight: 500;
@@ -130,7 +132,7 @@ header .header-location input {
   border: none;
   border-radius: 25px;
   align-self: center;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   margin: 25px auto;
 }
 
@@ -220,8 +222,12 @@ header .header-location input {
   z-index: 1;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.use-card div .fa-solid:hover {
-  animation: color-change 300ms forwards;
+.use-card div .fa-solid {
+  color: #353535;
+  transition: color 0.4s;
+}
+.use-card div:hover .fa-solid {
+  color: #9356dc;
 }
 
 .restaurant-card {

@@ -1,4 +1,5 @@
-@keyframes empty__heart {
+// ancienne anim coeur
+/*@keyframes empty__heart {
     0% {
         opacity: 1;
         
@@ -7,12 +8,14 @@
         opacity: 0;
     }
 }
+*/
 
-@keyframes color-change {
+// remplacé par une transition
+/*@keyframes color-change {
     from {
         color: $dark-grey;
 }
     to {
         color: $first-color;
     }
-}
+}*/
