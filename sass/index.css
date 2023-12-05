@@ -1,31 +1,12 @@
-/*@keyframes empty__heart {
-    0% {
-        opacity: 1;
-
-    }
-    100%{
-        opacity: 0;
-    }
-}
-*/
-/*@keyframes color-change {
-    from {
-        color: $dark-grey;
-}
-    to {
-        color: $first-color;
-    }
-}*/
 body {
   font-family: Roboto;
   font-weight: 500;
-  font-size: 1em;
   margin: 0;
 }
 
 .fa-solid {
-  padding: 0 10px 0 0;
   font-size: 1.4em;
+  padding: 0 10px 0 0;
   color: #353535;
 }
 
@@ -39,19 +20,24 @@ body {
 }
 
 .section-bgd {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   background-color: #f6f6f6;
   margin: 0;
-  width: 100%;
   height: auto;
+}
+
+section {
+  width: 100%;
   box-sizing: border-box;
   padding: 15px;
 }
 
-section {
-  padding: 35px 0 45px 0;
-}
-
 .restaurant-list {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -65,10 +51,6 @@ h1 {
 p {
   font-size: 1.2em;
   font-weight: 300;
-}
-
-h4 {
-  font-size: 1em;
 }
 
 a {
@@ -86,11 +68,6 @@ li {
   padding-bottom: 3px;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-}
-
 header {
   width: 100%;
   box-sizing: border-box;
@@ -105,12 +82,13 @@ header .header-logo {
 }
 header .header-location {
   width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: center;
   color: #353535;
-  padding: 20px 0;
-  gap: 17px;
+  padding: 20px;
+  gap: 20px;
   background-color: #eaeaea;
   align-items: baseline;
 }
@@ -118,7 +96,7 @@ header .header-location input {
   width: 120px;
   height: 25px;
   border: none;
-  background-color: #eaeaea;
+  background-color: transparent;
 }
 
 .button-fantasy {
@@ -136,6 +114,10 @@ header .header-location input {
   margin: 25px auto;
 }
 
+.button-fantasy:hover {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+}
+
 .button-new {
   display: flex;
   position: relative;
@@ -151,7 +133,7 @@ header .header-location input {
   line-height: 30px;
   justify-content: center;
   font-weight: 700;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
 .card-rate {
@@ -207,20 +189,22 @@ header .header-location input {
   border-radius: 12px;
   z-index: 2;
   color: #ffffff;
-  font-size: 1em;
   font-weight: 700;
 }
 .use-card div {
-  display: flex;
   width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  background-color: #ffffff;
+  border-radius: 15px;
   background-color: #f6f6f6;
-  border-radius: 20px;
   margin: 15px 15px 15px 30px;
   padding-left: 40px;
   gap: 20px;
   position: relative;
   z-index: 1;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .use-card div .fa-solid {
   color: #353535;
@@ -232,12 +216,12 @@ header .header-location input {
 
 .restaurant-card {
   width: 100%;
-  height: 250px;
   box-sizing: border-box;
-  background-color: #ffffff;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 15px;
+  height: 250px;
   overflow: hidden;
   justify-content: space-between;
 }
@@ -255,9 +239,9 @@ header .header-location input {
   align-self: center;
 }
 .restaurant-card .card-content {
-  height: 70px;
   display: flex;
   flex-direction: row;
+  height: 70px;
   justify-content: space-between;
   padding: 10px;
   gap: 10px;
@@ -271,7 +255,6 @@ header .header-location input {
 .restaurant-card .card-content p {
   font-family: Roboto;
   font-weight: 500;
-  font-size: 1em;
   font-weight: 300;
   color: #000000;
   text-align: start;
@@ -281,7 +264,7 @@ footer {
   width: 100%;
   box-sizing: border-box;
   background-color: #353535;
-  padding: 22px 25px 22px 25px;
+  padding: 25px;
 }
 footer h1 {
   font-family: Shrikhand;
@@ -292,17 +275,10 @@ footer h1 {
 footer .info {
   display: flex;
   flex-direction: column;
-  height: -moz-fit-content;
-  height: fit-content;
 }
-footer .info .info-logo {
-  width: 140px;
-}
-footer .info .info-liens a {
+footer .info a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 1em;
-  gap: 7px;
 }
 footer .info .fa-solid {
   font-size: 1.2em;
@@ -382,7 +358,6 @@ footer .info .fa-solid {
 }
 .main-course .restaurant-menu h2 {
   font-family: Roboto;
-  font-size: 1em;
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
@@ -395,20 +370,22 @@ footer .info .fa-solid {
 
 .card-choice {
   width: 100%;
-  height: 70px;
+  box-sizing: border-box;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  height: 70px;
   overflow: hidden;
 }
 .card-choice .card-choice-extend {
+  background-color: #ffffff;
+  border-radius: 15px;
   width: 120%;
   height: 70px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 70% 15% 15%;
   align-items: center;
-  background-color: #ffffff;
-  border-radius: 15px;
   transition: width 0.4s;
 }
 .card-choice .card-choice-extend .choice-text {

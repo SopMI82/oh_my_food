@@ -1,7 +1,7 @@
 .menu-header{
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: center;
+    
     .fa-solid{
         display: inline-block;
         position: absolute;
@@ -11,15 +11,13 @@
 }
 
 .restaurant{
-width: 100%;
-box-sizing: border-box;
-display: flex;
-flex-direction: column;
+    @include boxbasic;
+    @include column;
+
     .photo{
-        width: 100%;
-        max-height: 275px;
-        overflow: hidden;
+        @include photo;
         margin-bottom: -40px;
+
         img{
             width: 100%;
             height: auto;
@@ -28,10 +26,8 @@ flex-direction: column;
 }
 
 .main-course{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    @include boxbasic;
+    @include column;
     position: relative;
     z-index: 1;
     background-color: $light-grey;
@@ -53,8 +49,10 @@ flex-direction: column;
         }
 
         .card-rate{
+
             button{
                 background-color: $light-grey;
+
                 .fa-regular{
                     background-color: $light-grey;
                 }
@@ -76,7 +74,6 @@ flex-direction: column;
     
         h2{
             font-family: $txt-main;
-            @include small;
             @include thin;
             text-transform: uppercase;
             margin: 0;
@@ -92,26 +89,24 @@ flex-direction: column;
 }
 
 .card-choice{
-    width: 100%;
-    height: 70px;
-    border-radius: 15px;
+    @include boxbasic;
+    @include card;
     @include ombrage-medium;
+    height: 70px;    
     overflow: hidden;
 
     .card-choice-extend{
+        @include card;
         width: 120%;
         height: 70px;
         box-sizing: border-box;
         display: grid;
         grid-template-columns: 70% 15% 15%;
-        align-items: center;
-        background-color: $white;
-        border-radius: 15px;
+        align-items: center;        
         transition: width 0.4s;    
 
         .choice-text{
-            display: flex;
-            flex-direction: column;
+            @include column;
             padding-left: 15px;
             gap: 5px;
             h3, p{

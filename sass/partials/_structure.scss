@@ -1,40 +1,37 @@
 body {
     @include txt__main;
-    @include small;
     margin: 0;
 }
 
 .fa-solid{
-    padding: 0 10px 0 0;
     @include tall;
+    padding: 0 10px 0 0;
     color: $dark-grey;
   }
 
 .main-container{
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
+    @include boxbasic;
+    @include column;
     margin: 0;
     text-align: center;
 }
 
 .section-bgd{
+    @include boxbasic;
+    @include column;
     background-color: $light-grey;
-    margin: 0;
-    width: 100%;
+    margin: 0;    
     height: auto;
-    box-sizing: border-box;
-    padding: 15px;
 }
 
 section{
-    padding: 35px 0 45px 0;
+    @include boxbasic;
+    padding: 15px;
 }
 
 .restaurant-list{
-    display: flex;
-    flex-direction: column;
+    @include boxbasic;
+    @include column;
     gap: 18px;
 }
 
@@ -46,10 +43,6 @@ h1{
 p{
     @include medium;
     @include thin;
-}
-
-h4{
-    @include small;
 }
 
 a{
@@ -65,9 +58,4 @@ ul{
 li{
     list-style-type: none;
     padding-bottom: 3px;
-}
-
-.intro{
-    display: flex;
-    flex-direction: column;
 }

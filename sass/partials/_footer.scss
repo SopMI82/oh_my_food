@@ -1,8 +1,7 @@
 footer{
-    width: 100%;
-    box-sizing: border-box;
+    @include boxbasic;
     background-color: $dark-grey;
-    padding: 22px 25px 22px 25px;
+    padding: 25px;
 
     h1{
         @include txt__fantasy;
@@ -11,26 +10,16 @@ footer{
     }
 
     .info{
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
+        @include column;
 
-        .info-logo{
-            width: 140px;
-        }
-        
-        .info-liens a{
+        a{
             text-decoration: none;
             color: $white;
-            @include small;
-            gap: 7px;
         }
         
         .fa-solid{
             @include medium;
             color: $white;
         }
-
-
     }
 }

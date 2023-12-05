@@ -6,6 +6,11 @@
     margin: 25px auto;
 }
 
+.button-fantasy:hover{
+    background: $gradientreverse;
+}
+
+
 //bouton "nouveau"
 .button-new{
     display: flex;
@@ -22,7 +27,7 @@
     line-height: 30px;
     justify-content: center;
     @include fat;
-    @include ombrage-soft;
+    @include ombrage-medium;
 }
 
 //bouton coeur
