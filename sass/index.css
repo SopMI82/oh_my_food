@@ -1,1 +1,436 @@
-/*# sourceMappingURL=index.css.map */
+@keyframes empty__heart {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes color-change {
+  from {
+    color: #353535;
+  }
+  to {
+    color: #9356dc;
+  }
+}
+body {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1em;
+  margin: 0;
+}
+
+.fa-solid {
+  padding: 0 10px 0 0;
+  font-size: 1.4em;
+  color: #353535;
+}
+
+.main-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-align: center;
+}
+
+.section-bgd {
+  background-color: #f6f6f6;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+section {
+  padding: 35px 0 45px 0;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+h1 {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 3px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+header .header-logo {
+  width: 200px;
+  padding: 20px;
+}
+header .header-location {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #353535;
+  padding: 20px 0;
+  gap: 17px;
+  background-color: #eaeaea;
+  align-items: baseline;
+}
+header .header-location input {
+  width: 120px;
+  height: 25px;
+  border: none;
+  background-color: #eaeaea;
+}
+
+.button-fantasy {
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  color: #ffffff;
+  height: 50px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 25px;
+  align-self: center;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  margin: 25px auto;
+}
+
+.button-new {
+  display: flex;
+  position: relative;
+  top: 10px;
+  right: 80px;
+  z-index: 1;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  color: #008766;
+  border: none;
+  border-radius: 3px;
+  line-height: 30px;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.card-rate {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  padding: 10px 40px 0 0;
+}
+.card-rate button {
+  border: none;
+  background-color: #ffffff;
+}
+.card-rate button .fa-heart {
+  font-size: 2em;
+}
+.card-rate button .fa-regular {
+  background-color: #ffffff;
+}
+.card-rate button .fa-regular:hover {
+  animation: empty__heart 500ms forwards;
+}
+.card-rate button .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+          background-clip: text;
+  padding: 0;
+}
+.card-rate .heart {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.card-rate .empty {
+  z-index: 1;
+}
+.card-rate .empty:hover {
+  animation: empty__heart 500ms forwards;
+}
+
+.use-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.use-card .number-box {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  margin: 0 0 0 20px;
+  position: absolute;
+  background-color: #9356dc;
+  border-radius: 12px;
+  z-index: 2;
+  color: #ffffff;
+  font-size: 1em;
+  font-weight: 700;
+}
+.use-card div {
+  display: flex;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin: 15px 15px 15px 30px;
+  padding-left: 40px;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.use-card div .fa-solid:hover {
+  animation: color-change 300ms forwards;
+}
+
+.restaurant-card {
+  width: 100%;
+  height: 250px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.restaurant-card .photo {
+  width: 100%;
+  max-height: 275px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+.restaurant-card .photo img {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
+}
+.restaurant-card .card-content {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+}
+.restaurant-card .card-content h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+.restaurant-card .card-content p {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1em;
+  font-weight: 300;
+  color: #000000;
+  text-align: start;
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #353535;
+  padding: 22px 25px 22px 25px;
+}
+footer h1 {
+  font-family: Shrikhand;
+  font-weight: 500;
+  font-size: 1.4em;
+  color: #ffffff;
+}
+footer .info {
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+footer .info .info-logo {
+  width: 140px;
+}
+footer .info .info-liens a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1em;
+  gap: 7px;
+}
+footer .info .fa-solid {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.menu-header .fa-solid {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.restaurant {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant .photo {
+  width: 100%;
+  max-height: 275px;
+  overflow: hidden;
+  margin-bottom: -40px;
+}
+.restaurant .photo img {
+  width: 100%;
+  height: auto;
+}
+
+.main-course {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 15px 20px 15px;
+}
+.main-course .restaurant-info {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-course .restaurant-info h1 {
+  display: block;
+  font-family: Shrikhand;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+.main-course .restaurant-info .card-rate button {
+  background-color: #f6f6f6;
+}
+.main-course .restaurant-info .card-rate button .fa-regular {
+  background-color: #f6f6f6;
+}
+.main-course .menu-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-course .restaurant-menu {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0;
+}
+.main-course .restaurant-menu h2 {
+  font-family: Roboto;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+.main-course .restaurant-menu .style-bar {
+  width: 40px;
+  height: 3px;
+  background-color: #008766;
+}
+
+.card-choice {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  overflow: hidden;
+}
+.card-choice .card-choice-extend {
+  width: 120%;
+  height: 70px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 70% 15% 15%;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.card-choice .card-choice-extend .choice-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  gap: 5px;
+}
+.card-choice .card-choice-extend .choice-text h3, .card-choice .card-choice-extend .choice-text p {
+  margin: 0;
+}
+.card-choice .card-choice-extend .choice-price {
+  padding: 0 20px 15px 0;
+  align-self: flex-end;
+  text-align: right;
+}
+.card-choice .card-choice-extend .selected {
+  height: 70px;
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  text-align: center;
+}
+.card-choice .card-choice-extend .selected .fa-solid {
+  color: #008766;
+  line-height: 70px;
+}
+.card-choice .card-choice-extend:hover {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */

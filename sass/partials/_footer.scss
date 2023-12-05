@@ -1,0 +1,36 @@
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: $dark-grey;
+    padding: 22px 25px 22px 25px;
+
+    h1{
+        @include txt__fantasy;
+        @include tall;
+        color: $white;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+
+        .info-logo{
+            width: 140px;
+        }
+        
+        .info-liens a{
+            text-decoration: none;
+            color: $white;
+            @include small;
+            gap: 7px;
+        }
+        
+        .fa-solid{
+            @include medium;
+            color: $white;
+        }
+
+
+    }
+}

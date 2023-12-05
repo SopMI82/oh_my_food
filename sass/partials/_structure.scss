@@ -1,0 +1,73 @@
+body {
+    @include txt__main;
+    @include small;
+    margin: 0;
+}
+
+.fa-solid{
+    padding: 0 10px 0 0;
+    @include tall;
+    color: $dark-grey;
+  }
+
+.main-container{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+.section-bgd{
+    background-color: $light-grey;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+section{
+    padding: 35px 0 45px 0;
+}
+
+.restaurant-list{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+h1{
+    @include tall;
+    @include fat;
+}
+
+p{
+    @include medium;
+    @include thin;
+}
+
+h4{
+    @include small;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    padding-bottom: 3px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+}

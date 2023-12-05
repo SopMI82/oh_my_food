@@ -1,0 +1,49 @@
+@mixin button--fantasy{
+    background: linear-gradient(to top, $first-color, $second-color);
+    color: #ffffff;
+    height: 50px;
+    width: fit-content;
+    font-size: 16px;
+    padding: 0 25px ;
+    border: none;
+    border-radius: 25px;
+    align-self: center;
+}
+
+@mixin ombrage-soft{
+    box-shadow: 0px 4px 10px 0px #0000001A;
+}
+
+@mixin ombrage-medium{
+    box-shadow: 0px 4px 15px 0px #0000001A;
+}
+
+@mixin txt__main{
+    font-family: $txt-main;
+    font-weight: 500;
+}
+
+@mixin txt__fantasy{
+    font-family: $txt-fantasy;
+    font-weight: 500;
+}
+
+@mixin small{
+    font-size: 1em;
+}
+
+@mixin medium{
+    font-size: 1.2em;
+}
+
+@mixin tall{
+    font-size: 1.4em;
+}
+
+@mixin thin{
+    font-weight: 300;
+}
+
+@mixin fat{
+    font-weight: 700;
+}

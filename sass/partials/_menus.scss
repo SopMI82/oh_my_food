@@ -1,0 +1,144 @@
+.menu-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .fa-solid{
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+}
+
+.restaurant{
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+    .photo{
+        width: 100%;
+        max-height: 275px;
+        overflow: hidden;
+        margin-bottom: -40px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.main-course{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background-color: $light-grey;
+    border-radius: 40px 40px 0 0;
+    padding: 20px 15px 20px 15px;
+
+    .restaurant-info{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    
+        h1{
+            display: block;
+            font-family: $txt-fantasy;
+            @include tall;
+            font-weight: 500;
+        }
+
+        .card-rate{
+            button{
+                background-color: $light-grey;
+                .fa-regular{
+                    background-color: $light-grey;
+                }
+            }
+        }
+    }
+    .menu-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .restaurant-menu{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 30px 0;
+    
+        h2{
+            font-family: $txt-main;
+            @include small;
+            @include thin;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .style-bar{
+            width: 40px;
+            height: 3px;
+            background-color: $nouveau;
+
+        }
+    }
+}
+
+.card-choice{
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    @include ombrage-medium;
+    overflow: hidden;
+
+    .card-choice-extend{
+        width: 120%;
+        height: 70px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 70% 15% 15%;
+        align-items: center;
+        background-color: $white;
+        border-radius: 15px;
+            
+        .choice-text{
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            gap: 5px;
+            h3, p{
+                margin: 0;
+            }
+        }
+
+        .choice-price{
+            padding: 0 20px 15px 0;
+            align-self: flex-end;
+            text-align: right;
+        }
+
+        .selected{
+            height: 70px;
+            background-color: $third-color;
+            border-radius: 0 15px 15px 0;
+            text-align: center;
+            
+
+            .fa-solid{
+                color: $nouveau;
+                line-height: 70px;
+            }
+        }
+    }
+
+    .card-choice-extend:hover{
+        width: 100%;
+    }
+}
