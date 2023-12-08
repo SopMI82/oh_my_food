@@ -3,10 +3,12 @@
 .button-fantasy{
     @include button--fantasy;
     @include ombrage-medium;
+    transition: all ease-in-out 0.3s;
 }
 
 .button-fantasy:hover{
     background: $gradientreverse;
+    transition: all ease-in-out 0.3s;
 }
 
 
