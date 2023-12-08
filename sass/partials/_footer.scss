@@ -1,29 +1,27 @@
 footer{
-    width: 100%;
-    box-sizing: border-box;
+    @include boxbasic;
+    display: flex;
     background-color: $dark-grey;
-    padding: 22px 25px 22px 25px;
+    padding: 25px;
 
-    h1{
-        @include txt__fantasy;
-        @include tall;
-        color: $white;
-    }
 
     .info{
-        display: flex;
-        flex-direction: column;
-        height: fit-content;
+        @include boxbasic;
+        @include column;
 
-        .info-logo{
-            width: 140px;
+        h1{
+            @include txt__fantasy;
+            @include tall;
+            color: $white;
+            
+            @media (min-width : 1024px) {
+                text-align: end;
+            }
         }
         
-        .info-liens a{
+        a{
             text-decoration: none;
             color: $white;
-            @include small;
-            gap: 7px;
         }
         
         .fa-solid{
@@ -31,6 +29,25 @@ footer{
             color: $white;
         }
 
-
+        .info--contact{
+            @include boxbasic;
+            @include column;
+        }
+    }
+    
+    @media (min-width : 1024px) {
+        justify-content: end;
+        .info{
+            width: 75%;
+            justify-content: right;
+            gap: 5%;
+            flex-direction: row-reverse;
+            .info--contact{
+                @include row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 20px;
+             }
+        }           
     }
 }

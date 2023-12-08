@@ -1,9 +1,7 @@
 .use-card{
-    display: flex;
-    flex-direction: row;
+    @include row;
     justify-content: flex-start;
     align-items: center;
-
 
     .number-box{
         width: 24px;
@@ -15,24 +13,34 @@
         border-radius: 12px;
         z-index: 2;
         color: $white;
-        @include small;
         @include fat;
     }
 
     div{
-        display: flex;
-        width: 100%;
+        @include boxbasic;
+        @include row;
+        @include ombrage-medium;
+        @include card;
         background-color: $light-grey;
-        border-radius: 20px;
         margin: 15px 15px 15px 30px;
         padding-left: 40px;
         gap: 20px;
         position: relative;
         z-index: 1;
-        @include ombrage-medium;
-
-        .fa-solid:hover{
-            animation: color-change 300ms forwards;
+        
+        .fa-solid{
+            color: $dark-grey;
+            transition: color 0.4s;
         }
+
+        &:hover .fa-solid{
+            color: $first-color;
+        }
+        
     }
+
+    @media (min-width : 1024px) {
+        width: 33%;
+    }
+
 }
