@@ -3,7 +3,6 @@
 .button-fantasy{
     @include button--fantasy;
     @include ombrage-medium;
-    margin: 25px auto;
 }
 
 .button-fantasy:hover{

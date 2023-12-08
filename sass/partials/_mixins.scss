@@ -38,7 +38,11 @@
     padding: 0 25px ;
     border: none;
     border-radius: 25px;
-    align-self: center;
+    display: flex;
+    margin: 25px auto;
+    justify-self: center;
+    line-height: 50px;
+
 }
 
 @mixin ombrage-medium{

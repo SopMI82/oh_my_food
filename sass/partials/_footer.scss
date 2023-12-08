@@ -1,17 +1,24 @@
 footer{
     @include boxbasic;
+    display: flex;
     background-color: $dark-grey;
     padding: 25px;
 
-    h1{
-        @include txt__fantasy;
-        @include tall;
-        color: $white;
-    }
 
     .info{
+        @include boxbasic;
         @include column;
 
+        h1{
+            @include txt__fantasy;
+            @include tall;
+            color: $white;
+            
+            @media (min-width : 1024px) {
+                text-align: end;
+            }
+        }
+        
         a{
             text-decoration: none;
             color: $white;
@@ -21,5 +28,26 @@ footer{
             @include medium;
             color: $white;
         }
+
+        .info--contact{
+            @include boxbasic;
+            @include column;
+        }
+    }
+    
+    @media (min-width : 1024px) {
+        justify-content: end;
+        .info{
+            width: 75%;
+            justify-content: right;
+            gap: 5%;
+            flex-direction: row-reverse;
+            .info--contact{
+                @include row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 20px;
+             }
+        }           
     }
 }
