@@ -61,4 +61,15 @@ a{
         @include row;
         justify-content: space-between;
     }
+
+    .restaurant-list{
+        @include row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+
+        a{
+            width: 45%;
+        }
+    }
 }

@@ -132,6 +132,16 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
+  .restaurant-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+  }
+  .restaurant-list a {
+    width: 45%;
+  }
 }
 header {
   width: 100%;
@@ -330,6 +340,11 @@ header .header-location input {
   font-weight: 300;
   color: #000000;
   text-align: start;
+}
+@media (min-width: 1024px) {
+  .restaurant-card {
+    width: 100%;
+  }
 }
 
 footer {
