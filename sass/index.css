@@ -121,6 +121,18 @@ a {
   text-decoration: none;
 }
 
+@media (min-width: 1024px) {
+  section {
+    padding: 50px 80px;
+  }
+  .howto {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 header {
   width: 100%;
   box-sizing: border-box;
@@ -267,6 +279,11 @@ header .header-location input {
 }
 .use-card div:hover .fa-solid {
   color: #9356dc;
+}
+@media (min-width: 1024px) {
+  .use-card {
+    width: 33%;
+  }
 }
 
 .restaurant-card {
