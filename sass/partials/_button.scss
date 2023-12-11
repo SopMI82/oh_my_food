@@ -74,51 +74,53 @@
 // flèches en mode tablette
 .chevron {
   display: none;
+  width: 70px;
+  height: 70px;
+  margin: 120px 0;
+  font-size: 25px;
+  background-color: $white;
+  border-radius: 35px;
+  border: none;
+  justify-items: center;
+  color: $dark-grey;
+  @include ombrage-medium;
+
+  :hover {
+    color: $first-color;
+  }
+
+  i {
+    padding: 0;
+  }
 
   //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
   @media (min-width: 768px) and (max-width: 1024px) {
     display: block;
-    width: 70px;
-    height: 70px;
-    margin: 120px 0;
-    font-size: 25px;
-    text-align: center;
-    background-color: $white;
-    border-radius: 35px;
-    border: none;
-    align-items: auto;
-    justify-items: center;
-    color: $dark-grey;
-    @include ombrage-medium;
+  }
+}
 
-    :hover {
-      color: $first-color;
-    }
+.right {
+  cursor: pointer;
+}
 
-    i {
-      padding: 0;
-    }
-  }
+.right + .menu-container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+  //comment faire pour répéter l'action à chaque clic ?
+}
 
-  .right {
-    cursor: pointer;
-  }
+.right:focus + .menu-container .menu__container--extend {
+  transform: translateX(-520px);
+}
 
-  .right + .menu-container .menu__container--extend {
-    transition: transform 0.7s ease-in-out;
-  }
-  .right:focus + .menu-container .menu__container--extend {
-    transform: translateX(-520px);
-  }
+.left {
+  cursor: pointer;
+}
 
-  .left {
-    cursor: pointer;
-  }
+.left + .menu-container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+    //comment faire pour répéter l'action à chaque clic ?
+}
 
-  .left + .menu-container .menu__container--extend {
-    transition: transform 0.7s ease-in-out;
-  }
-  .left:focus + .menu-container .menu__container--extend {
-    transform: translateX(+510px);
-  }
+.left:focus + .menu-container .menu__container--extend {
+  transform: translateX(+510px);
 }
