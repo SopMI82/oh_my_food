@@ -1,74 +1,124 @@
-
 // bouton dégradé
-.button-fantasy{
-    @include button--fantasy;
-    @include ombrage-medium;
-    transition: all ease-in-out 0.3s;
+.button-fantasy {
+  @include button--fantasy;
+  @include ombrage-medium;
+  transition: all ease-in-out 0.3s;
 }
 
-.button-fantasy:hover{
-    background: $gradientreverse;
-    transition: all ease-in-out 0.3s;
+.button-fantasy:hover {
+  background: $gradientreverse;
+  transition: all ease-in-out 0.3s;
 }
-
 
 //bouton "nouveau"
-.button-new{
-    display: flex;
-    position: relative;
-    top: 10px;
-    right: 80px;
-    z-index: 1;
-    width: 80px;
-    height: 30px;
-    background-color: $third-color;
-    color: $nouveau;
-    border: none;
-    border-radius: 3px;
-    line-height: 30px;
-    justify-content: center;
-    @include fat;
-    @include ombrage-medium;
+.button-new {
+  display: flex;
+  position: relative;
+  top: 10px;
+  right: 80px;
+  z-index: 1;
+  width: 80px;
+  height: 30px;
+  background-color: $third-color;
+  color: $nouveau;
+  border: none;
+  border-radius: 3px;
+  line-height: 30px;
+  justify-content: center;
+  @include fat;
+  @include ombrage-medium;
 }
 
 //bouton coeur
 .card-rate {
-    display: flex;
-    position: relative;
-    right: 2em;
-    align-self: center;
-    width: 30px;
-    height: 30px;
-    
-    button {
+  display: flex;
+  position: relative;
+  right: 2em;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+
+  button {
     border: none;
     position: relative;
     align-self: center;
     background-color: $white;
     padding: 0;
-    
-        .fa-heart {
-            font-size: 2em;
-        }
-    
-        .fa-regular {
-            display:flex;
-            position :absolute;
-            background-color: $white;
-            z-index:1;
-            opacity: 1;
-            transition: opacity 0.4s;
-        }
-    
-        .fa-regular:hover{
-            opacity:0;
-        }
-    
-        .fa-solid {
-            display:flex;
-            color: transparent;
-            background-image: linear-gradient($second-color,$first-color);
-            background-clip: text;
-        }
+
+    .fa-heart {
+      font-size: 2em;
     }
+
+    .fa-regular {
+      display: flex;
+      position: absolute;
+      background-color: $white;
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+
+    .fa-regular:hover {
+      opacity: 0;
+    }
+
+    .fa-solid {
+      display: flex;
+      color: transparent;
+      background-image: linear-gradient($second-color, $first-color);
+      background-clip: text;
+    }
+  }
+}
+
+// flèches en mode tablette
+.chevron {
+  display: none;
+
+  //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
+  @media (min-width: 768px) and (max-width: 1024px) {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 120px 0;
+    font-size: 25px;
+    text-align: center;
+    background-color: $white;
+    border-radius: 35px;
+    border: none;
+    align-items: auto;
+    justify-items: center;
+    color: $dark-grey;
+    @include ombrage-medium;
+
+    :hover {
+      color: $first-color;
+    }
+
+    i {
+      padding: 0;
+    }
+  }
+
+  .right {
+    cursor: pointer;
+  }
+
+  .right + .menu-container .menu__container--extend {
+    transition: transform 0.7s ease-in-out;
+  }
+  .right:focus + .menu-container .menu__container--extend {
+    transform: translateX(-520px);
+  }
+
+  .left {
+    cursor: pointer;
+  }
+
+  .left + .menu-container .menu__container--extend {
+    transition: transform 0.7s ease-in-out;
+  }
+  .left:focus + .menu-container .menu__container--extend {
+    transform: translateX(+510px);
+  }
 }

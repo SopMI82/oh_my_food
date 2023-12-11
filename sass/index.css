@@ -252,6 +252,51 @@ header .header-location input {
           background-clip: text;
 }
 
+.chevron {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .chevron {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 120px 0;
+    font-size: 25px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 35px;
+    border: none;
+    align-items: auto;
+    justify-items: center;
+    color: #353535;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  }
+  .chevron :hover {
+    color: #9356dc;
+  }
+  .chevron i {
+    padding: 0;
+  }
+}
+.chevron .right {
+  cursor: pointer;
+}
+.chevron .right + .menu-container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+}
+.chevron .right:focus + .menu-container .menu__container--extend {
+  transform: translateX(-520px);
+}
+.chevron .left {
+  cursor: pointer;
+}
+.chevron .left + .menu-container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+}
+.chevron .left:focus + .menu-container .menu__container--extend {
+  transform: translateX(510px);
+}
+
 .use-card {
   display: flex;
   flex-direction: row;
@@ -297,7 +342,6 @@ header .header-location input {
     width: 33%;
   }
 }
-
 .restaurant-card {
   width: 100%;
   box-sizing: border-box;
@@ -400,7 +444,6 @@ footer .info .info--contact {
     gap: 20px;
   }
 }
-
 .menu-header {
   display: flex;
   flex-direction: row;
@@ -460,6 +503,9 @@ footer .info .info--contact {
 .main-course .restaurant-info .card-rate button .fa-regular {
   background-color: #f6f6f6;
 }
+.main-course .navigation {
+  display: none;
+}
 .main-course .menu-container {
   display: flex;
   flex-direction: column;
@@ -490,8 +536,53 @@ footer .info .info--contact {
     align-self: center;
     padding-left: 15%;
     padding-right: 15%;
+    margin: 0;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-course {
+    width: 90%;
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+    /*  .navigation{
+            @include boxbasic;
+            @include row;
+            box-sizing: content-box;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 1;
+        }*/
+  }
+  .main-course .navtab {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    align-self: center;
+  }
+  .main-course .menu-container {
+    width: 500px;
+    padding: 10px;
+    overflow: hidden;
+  }
+  .main-course .menu__container--extend {
+    width: 1500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 20px;
+  }
+  .main-course .restaurant-menu {
+    width: 500px;
+    padding: 15px;
+    margin: 0;
+  }
+}
+
 .card-choice {
   width: 100%;
   box-sizing: border-box;
@@ -518,7 +609,8 @@ footer .info .info--contact {
   padding-left: 15px;
   gap: 5px;
 }
-.card-choice .card-choice-extend .choice-text h3, .card-choice .card-choice-extend .choice-text p {
+.card-choice .card-choice-extend .choice-text h3,
+.card-choice .card-choice-extend .choice-text p {
   margin: 0;
 }
 .card-choice .card-choice-extend .choice-price {

@@ -1,154 +1,199 @@
-.menu-header{
-    @include row;
-    justify-content: center;
-    
-    .fa-solid{
-        display: inline-block;
-        position: absolute;
-        left: 30px;
-        top: 30px;
-    }
+.menu-header {
+  @include row;
+  justify-content: center;
+
+  .fa-solid {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
 }
 
-.restaurant{
-    @include boxbasic;
-    @include column;
+.restaurant {
+  @include boxbasic;
+  @include column;
 
-    .photo{
-        @include photo;
-        margin-bottom: -40px;
+  .photo {
+    @include photo;
+    margin-bottom: -40px;
 
-        img{
-            width: 100%;
-            height: auto;
-        }
+    img {
+      width: 100%;
+      height: auto;
     }
+  }
 }
 
-.main-course{
-    @include boxbasic;
-    @include column;
-    position: relative;
-    z-index: 1;
-    background-color: $light-grey;
-    border-radius: 40px 40px 0 0;
-    padding: 20px 15px 20px 15px;
+.main-course {
+  @include boxbasic;
+  @include column;
+  position: relative;
+  z-index: 1;
+  background-color: $light-grey;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 15px 20px 15px;
 
-    .restaurant-info{
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        h1{
-            display: block;
-            font-family: $txt-fantasy;
-            @include tall;
-            font-weight: 500;
+  .restaurant-info {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      display: block;
+      font-family: $txt-fantasy;
+      @include tall;
+      font-weight: 500;
+    }
+
+    .card-rate {
+      button {
+        background-color: $light-grey;
+
+        .fa-regular {
+          background-color: $light-grey;
         }
-
-        .card-rate{
-
-            button{
-                background-color: $light-grey;
-
-                .fa-regular{
-                    background-color: $light-grey;
-                }
-            }
-        }
+      }
     }
-    .menu-container{
-        display: flex;
-        flex-direction: column;
-    }
+  }
 
-    .restaurant-menu{
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin: 30px 0;
-    
-        h2{
-            font-family: $txt-main;
-            @include thin;
-            text-transform: uppercase;
-            margin: 0;
-        }
+  .navigation {
+    display: none;
+  }
 
-        .style-bar{
-            width: 40px;
-            height: 3px;
-            background-color: $nouveau;
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-        }
+  .restaurant-menu {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+
+    h2 {
+      font-family: $txt-main;
+      @include thin;
+      text-transform: uppercase;
+      margin: 0;
     }
 
-    //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
-    @media (min-width : 1025px) {
-        width: 80%;
-        max-width: 1220px;
-        align-self: center;
-        padding-left:15% ;
-        padding-right: 15%;
+    .style-bar {
+      width: 40px;
+      height: 3px;
+      background-color: $nouveau;
+    }
+  }
+
+  //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
+  @media (min-width: 1025px) {
+    width: 80%;
+    max-width: 1220px;
+    align-self: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+  }
+
+  //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+    // max-width: 1220px;
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+
+    .navtab {
+      @include boxbasic;
+      @include row;
+      align-content: space-between;
+      align-self: center;
+    }
+    /*  .navigation{
+            @include boxbasic;
+            @include row;
+            box-sizing: content-box;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 1;
+        }*/
+
+    .menu-container {
+      width: 500px;
+      padding: 10px;
+      overflow: hidden;
     }
 
-    //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
-    @media (min-width : 768px), (max-width: 1024px) {
-
+    .menu__container--extend {
+      width: 1500px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      gap: 20px;
     }
+
+    .restaurant-menu {
+      width: 500px;
+      padding: 15px;
+      margin: 0;
+    }
+  }
 }
 
-.card-choice{
-    @include boxbasic;
+.card-choice {
+  @include boxbasic;
+  @include card;
+  @include ombrage-medium;
+  height: 70px;
+  overflow: hidden;
+
+  .card-choice-extend {
     @include card;
-    @include ombrage-medium;
-    height: 70px;    
-    overflow: hidden;
+    width: 120%;
+    height: 70px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    align-items: center;
+    transition: width 0.4s;
 
-    .card-choice-extend{
-        @include card;
-        width: 120%;
-        height: 70px;
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 70% 15% 15%;
-        align-items: center;        
-        transition: width 0.4s;    
-
-        .choice-text{
-            @include column;
-            padding-left: 15px;
-            gap: 5px;
-            h3, p{
-                margin: 0;
-            }
-        }
-
-        .choice-price{
-            padding: 0 20px 15px 0;
-            align-self: flex-end;
-            text-align: right;
-        }
-
-        .selected{
-            height: 70px;
-            background-color: $third-color;
-            border-radius: 0 15px 15px 0;
-            text-align: center;
-            
-
-            .fa-solid{
-                color: $nouveau;
-                line-height: 70px;
-            }
-        }
+    .choice-text {
+      @include column;
+      padding-left: 15px;
+      gap: 5px;
+      h3,
+      p {
+        margin: 0;
+      }
     }
 
-    .card-choice-extend:hover{
-        width: 100%;
+    .choice-price {
+      padding: 0 20px 15px 0;
+      align-self: flex-end;
+      text-align: right;
     }
+
+    .selected {
+      height: 70px;
+      background-color: $third-color;
+      border-radius: 0 15px 15px 0;
+      text-align: center;
+
+      .fa-solid {
+        color: $nouveau;
+        line-height: 70px;
+      }
+    }
+  }
+
+  .card-choice-extend:hover {
+    width: 100%;
+  }
 }
