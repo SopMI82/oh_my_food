@@ -343,11 +343,6 @@ header .header-location input {
   color: #000000;
   text-align: start;
 }
-@media (min-width: 1024px) {
-  .restaurant-card {
-    width: 100%;
-  }
-}
 
 footer {
   width: 100%;
@@ -488,7 +483,15 @@ footer .info .info--contact {
   height: 3px;
   background-color: #008766;
 }
-
+@media (min-width: 1025px) {
+  .main-course {
+    width: 80%;
+    max-width: 1220px;
+    align-self: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 .card-choice {
   width: 100%;
   box-sizing: border-box;
