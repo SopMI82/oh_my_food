@@ -1,6 +1,6 @@
 
 
-.restaurant-card{
+.restaurant__card{
     @include boxbasic;
     @include column;
     @include card;
@@ -18,7 +18,7 @@
         }
     }
 
-    .card-content{
+    .restaurant__card-content{
         @include row;
         height: 70px;        
         justify-content: space-between;

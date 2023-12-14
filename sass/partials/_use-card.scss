@@ -1,9 +1,9 @@
-.use-card{
+.howto__card{
     @include row;
     justify-content: flex-start;
     align-items: center;
 
-    .number-box{
+    .howto__card-number{
         width: 24px;
         height: 24px;
         line-height: 24px;

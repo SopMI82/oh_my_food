@@ -74,7 +74,7 @@ body {
   color: #353535;
 }
 
-.main-container {
+.main__container {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -83,7 +83,7 @@ body {
   text-align: center;
 }
 
-.section-bgd {
+.section__bgd {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -99,7 +99,7 @@ section {
   padding: 15px;
 }
 
-.restaurant-list {
+.restaurant__list {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -132,14 +132,14 @@ a {
     flex-direction: row;
     justify-content: space-between;
   }
-  .restaurant-list {
+  .restaurant__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
   }
-  .restaurant-list a {
+  .restaurant__list a {
     width: 45%;
   }
 }
@@ -155,7 +155,7 @@ header .header__logo {
   width: 200px;
   padding: 20px;
 }
-header .header-location {
+header .header__location {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -167,7 +167,7 @@ header .header-location {
   background-color: #eaeaea;
   align-items: baseline;
 }
-header .header-location input {
+header .header__location input {
   width: 120px;
   height: 25px;
   border: none;
@@ -197,7 +197,7 @@ header .header-location input {
   transition: all ease-in-out 0.3s;
 }
 
-.button-new {
+.button__new {
   display: flex;
   position: relative;
   top: 10px;
@@ -281,11 +281,11 @@ header .header-location input {
   cursor: pointer;
 }
 
-.right + .menu-container .menu__container--extend {
+.right + .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
 }
 
-.right:focus + .menu-container .menu__container--extend {
+.right:focus + .menu__container .menu__container--extend {
   transform: translateX(-520px);
 }
 
@@ -293,11 +293,11 @@ header .header-location input {
   cursor: pointer;
 }
 
-.left + .menu-container .menu__container--extend {
+.left + .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
 }
 
-.left:focus + .menu-container .menu__container--extend {
+.left:focus + .menu__container .menu__container--extend {
   transform: translateX(510px);
 }
 
@@ -317,13 +317,13 @@ header .header-location input {
   transform: translateX(-510px);
 }
 
-.use-card {
+.howto__card {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
-.use-card .number-box {
+.howto__card .howto__card-number {
   width: 24px;
   height: 24px;
   line-height: 24px;
@@ -335,7 +335,7 @@ header .header-location input {
   color: #ffffff;
   font-weight: 700;
 }
-.use-card div {
+.howto__card div {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -350,19 +350,19 @@ header .header-location input {
   position: relative;
   z-index: 1;
 }
-.use-card div .fa-solid {
+.howto__card div .fa-solid {
   color: #353535;
   transition: color 0.4s;
 }
-.use-card div:hover .fa-solid {
+.howto__card div:hover .fa-solid {
   color: #9356dc;
 }
 @media (min-width: 1024px) {
-  .use-card {
+  .howto__card {
     width: 33%;
   }
 }
-.restaurant-card {
+.restaurant__card {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -373,20 +373,20 @@ header .header-location input {
   overflow: hidden;
   justify-content: space-between;
 }
-.restaurant-card .restaurant__photo {
+.restaurant__card .restaurant__photo {
   width: 100%;
   max-height: 275px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
-.restaurant-card .restaurant__photo img {
+.restaurant__card .restaurant__photo img {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   align-self: center;
 }
-.restaurant-card .card-content {
+.restaurant__card .restaurant__card-content {
   display: flex;
   flex-direction: row;
   height: 70px;
@@ -394,13 +394,13 @@ header .header-location input {
   padding: 10px;
   gap: 10px;
 }
-.restaurant-card .card-content h3 {
+.restaurant__card .restaurant__card-content h3 {
   font-size: 1.2em;
   font-weight: 700;
   color: #000000;
   margin: 0;
 }
-.restaurant-card .card-content p {
+.restaurant__card .restaurant__card-content p {
   font-family: Roboto;
   font-weight: 500;
   font-weight: 300;

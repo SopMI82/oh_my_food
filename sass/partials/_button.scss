@@ -11,7 +11,7 @@
 }
 
 //bouton "nouveau"
-.button-new {
+.button__new {
   display: flex;
   position: relative;
   top: 10px;
@@ -106,12 +106,12 @@
   cursor: pointer;
 }
 
-.right + .menu-container .menu__container--extend {
+.right + .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
   //comment faire pour répéter l'action à chaque clic ?
 }
 
-.right:focus + .menu-container .menu__container--extend {
+.right:focus + .menu__container .menu__container--extend {
   transform: translateX(-520px);
 }
 
@@ -119,12 +119,12 @@
   cursor: pointer;
 }
 
-.left + .menu-container .menu__container--extend {
+.left + .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
     //comment faire pour répéter l'action à chaque clic ?
 }
 
-.left:focus + .menu-container .menu__container--extend {
+.left:focus + .menu__container .menu__container--extend {
   transform: translateX(+510px);
 }
 
@@ -133,7 +133,7 @@
 
 .entries + .nav--tab .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
-  //comment faire pour répéter l'action à chaque clic ?
+  //est-ce parce que ce n'est pas dans la meme div ? le chemin n'est pas bon ?
 }
 
 .entries:focus + .nav--tab .navigation .menu__container .menu__container--extend {
@@ -142,7 +142,6 @@
 
 .desserts + .navigation .nav--tab .menu__container .menu__container--extend {
   transition: transform 0.7s ease-in-out;
-    //comment faire pour répéter l'action à chaque clic ?
 }
 
 .desserts:focus + .navigation .nav--tab .menu__container .menu__container--extend {

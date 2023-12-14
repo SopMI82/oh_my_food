@@ -9,7 +9,7 @@ body {
     color: $dark-grey;
   }
 
-.main-container{
+.main__container{
     @include boxbasic;
     @include column;
     margin: 0;
@@ -18,7 +18,7 @@ body {
 
 
 
-.section-bgd{
+.section__bgd{
     @include boxbasic;
     @include column;
     background-color: $light-grey;
@@ -31,7 +31,7 @@ section{
     padding: 15px;
 }
 
-.restaurant-list{
+.restaurant__list{
     @include boxbasic;
     @include column;
     gap: 18px;
@@ -63,7 +63,7 @@ a{
         justify-content: space-between;
     }
 
-    .restaurant-list{
+    .restaurant__list{
         @include row;
         flex-wrap: wrap;
         justify-content: center;

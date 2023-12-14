@@ -9,7 +9,7 @@ header{
         padding: 20px;
     }
 
-    .header-location{
+    .header__location{
         @include boxbasic;
         @include row;
         justify-content: center;
