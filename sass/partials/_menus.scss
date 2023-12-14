@@ -1,140 +1,219 @@
-.menu-header{
-    @include row;
-    justify-content: center;
-    
-    .fa-solid{
-        display: inline-block;
-        position: absolute;
-        left: 30px;
-        top: 30px;
+.restaurant {
+  @include boxbasic;
+  @include column;
+
+  .restaurant__photo {
+    @include photo;
+    margin-bottom: -40px;
+
+    img {
+      width: 100%;
+      height: auto;
     }
+  }
 }
 
-.restaurant{
-    @include boxbasic;
-    @include column;
+.restaurant__menu {
+  @include boxbasic;
+  @include column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  background-color: $light-grey;
+  border-radius: 40px 40px 0 0;
+  padding: 20px 15px 20px 15px;
 
-    .photo{
-        @include photo;
-        margin-bottom: -40px;
+  .restaurant__info {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-        img{
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-.main-course{
-    @include boxbasic;
-    @include column;
-    position: relative;
-    z-index: 1;
-    background-color: $light-grey;
-    border-radius: 40px 40px 0 0;
-    padding: 20px 15px 20px 15px;
-
-    .restaurant-info{
-        width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    
-        h1{
-            display: block;
-            font-family: $txt-fantasy;
-            @include tall;
-            font-weight: 500;
-        }
-
-        .card-rate{
-
-            button{
-                background-color: $light-grey;
-
-                .fa-regular{
-                    background-color: $light-grey;
-                }
-            }
-        }
-    }
-    .menu-container{
-        display: flex;
-        flex-direction: column;
+    h1 {
+      display: block;
+      font-family: $txt-fantasy;
+      @include tall;
+      font-weight: 500;
     }
 
-    .restaurant-menu{
-        width: 100%;
-        box-sizing: border-box;
+    .restaurant__rate {
+      button {
+        background-color: $light-grey;
+
+        .fa-regular {
+          background-color: $light-grey;
+        }
+      }
+    }
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .recipes {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+  }
+
+  h2 {
+    font-family: $txt-main;
+    @include thin;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .recipes__stylebar {
+    width: 40px;
+    height: 3px;
+    background-color: $nouveau;
+  }
+
+  //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
+  @media (min-width: 1025px) {
+    width: 80%;
+    max-width: 1220px;
+    align-self: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin: 0;
+  }
+
+  //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+    // max-width: 1220px;
+    align-self: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+
+    .nav--tab {
+      @include boxbasic;
+      @include row;
+      justify-content: space-between;
+
+      .menu__container {
+        width: 510px;
+        padding: 10px;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin: 30px 0;
-    
-        h2{
-            font-family: $txt-main;
-            @include thin;
-            text-transform: uppercase;
+        overflow: hidden;
+
+        .menu__container--extend {
+          width: 1600px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-self: center;
+
+          .recipes {
+            width: 500px;
+            padding: 15px;
             margin: 0;
+          }
         }
-
-        .style-bar{
-            width: 40px;
-            height: 3px;
-            background-color: $nouveau;
-
-        }
+      }
     }
+    // menu de navigation en mode tablette
+
+    .nav--tab {
+      @include boxbasic;
+      @include row;
+
+      .navigation {
+        @include boxbasic;
+        @include column;
+        justify-content: space-between;
+        width: 25%;
+        padding: 25px 0;
+        border-right: 4px $nouveau solid;
+
+        .recipes_button {
+          padding: 10px;
+          border: none;
+          background-color: $light-grey;
+          text-align: left;
+          cursor: pointer;
+        }
+        .recipes_button:focus {
+          border-bottom: 4px $nouveau solid;
+          color: $dark-grey;
+          h2{
+            @include fat;
+          }
+        }
+      }
+
+      .menu__container--extend {
+        h2 {
+          display: none;
+        }
+        .recipes__stylebar {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
-.card-choice{
-    @include boxbasic;
+.recipes__choice {
+  @include boxbasic;
+  @include card;
+  @include ombrage-medium;
+  height: 70px;
+  overflow: hidden;
+
+  .recipes__choice--extend {
     @include card;
-    @include ombrage-medium;
-    height: 70px;    
-    overflow: hidden;
+    width: 120%;
+    height: 70px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 70% 15% 15%;
+    align-items: center;
+    transition: width 0.4s;
 
-    .card-choice-extend{
-        @include card;
-        width: 120%;
-        height: 70px;
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 70% 15% 15%;
-        align-items: center;        
-        transition: width 0.4s;    
-
-        .choice-text{
-            @include column;
-            padding-left: 15px;
-            gap: 5px;
-            h3, p{
-                margin: 0;
-            }
-        }
-
-        .choice-price{
-            padding: 0 20px 15px 0;
-            align-self: flex-end;
-            text-align: right;
-        }
-
-        .selected{
-            height: 70px;
-            background-color: $third-color;
-            border-radius: 0 15px 15px 0;
-            text-align: center;
-            
-
-            .fa-solid{
-                color: $nouveau;
-                line-height: 70px;
-            }
-        }
+    .recipes__text {
+      @include column;
+      padding-left: 15px;
+      gap: 5px;
+      h3,
+      p {
+        margin: 0;
+      }
     }
 
-    .card-choice-extend:hover{
-        width: 100%;
+    .recipes__price {
+      padding: 0 20px 15px 0;
+      text-align: right;
+      align-self: flex-end;
     }
+
+    .recipes__selected {
+      height: 70px;
+      background-color: $third-color;
+      border-radius: 0 15px 15px 0;
+      text-align: center;
+
+      .fa-solid {
+        color: $nouveau;
+        line-height: 70px;
+      }
+    }
+  }
+
+  .recipes__choice--extend:hover {
+    width: 100%;
+  }
 }

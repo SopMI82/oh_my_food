@@ -29,12 +29,13 @@ footer{
             color: $white;
         }
 
-        .info--contact{
+        .info__contact{
             @include boxbasic;
             @include column;
         }
     }
     
+    //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
     @media (min-width : 1024px) {
         justify-content: end;
         .info{
@@ -42,12 +43,17 @@ footer{
             justify-content: right;
             gap: 5%;
             flex-direction: row-reverse;
-            .info--contact{
+            .info__contact{
                 @include row;
                 justify-content: flex-end;
                 align-items: center;
                 gap: 20px;
              }
         }           
+    }
+
+    //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
+    @media (min-width : 768px) and (max-width: 1024px) {
+
     }
 }

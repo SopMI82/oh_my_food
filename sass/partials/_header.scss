@@ -4,12 +4,12 @@ header{
     align-items: center;
     margin: auto;
 
-    .header-logo{
+    .header__logo{
         width: 200px;
         padding: 20px;
     }
 
-    .header-location{
+    .header__location{
         @include boxbasic;
         @include row;
         justify-content: center;
@@ -25,4 +25,16 @@ header{
             @include transparent;
         }        
     }
+}
+
+.header {
+  @include row;
+  justify-content: center;
+
+  .fa-solid {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
 }

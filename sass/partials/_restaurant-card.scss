@@ -1,6 +1,4 @@
-
-
-.restaurant-card{
+.restaurant__card{
     @include boxbasic;
     @include column;
     @include card;
@@ -8,7 +6,7 @@
     overflow: hidden;
     justify-content: space-between;
 
-    .photo{
+    .restaurant__photo{
         @include photo;
         @include row;
         img{
@@ -18,7 +16,7 @@
         }
     }
 
-    .card-content{
+    .restaurant__card-content{
         @include row;
         height: 70px;        
         justify-content: space-between;
@@ -40,9 +38,4 @@
             }
 // pour le coeur voir page button
     }
-
-    @media (min-width : 1024px) {
-        width: 100%;
-    }
-
 }
