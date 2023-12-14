@@ -143,6 +143,28 @@ a {
     width: 45%;
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    padding: 10px 30px;
+  }
+  .howto {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .restaurant__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  .restaurant__list a {
+    width: 45%;
+  }
+}
 header {
   width: 100%;
   box-sizing: border-box;

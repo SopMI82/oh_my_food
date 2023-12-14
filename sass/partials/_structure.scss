@@ -73,10 +73,28 @@ a{
             width: 45%;
         }
     }
-
-    //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
-    @media (min-width : 768px) and (max-width: 1024px) {
-
-    }
-
 }
+
+
+//  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
+    @media (min-width : 768px) and (max-width: 1024px) {
+   
+        section{
+        padding: 10px 30px;
+    }
+    .howto{
+        @include boxbasic;
+        @include row;
+        justify-content: space-between;
+    }
+    
+    .restaurant__list{
+        @include row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+
+        a{
+            width: 45%;
+        }
+    }}
