@@ -1,67 +1,76 @@
-@charset "UTF-8";
+@keyframes shake {
+  0% {
+    transform: scaleX(1);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes fillplate {
+  0% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  15% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  45% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  80% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+}
 .loader {
-  width: 300px;
-  height: 300px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
   margin: auto;
+  z-index: 9999;
 }
 .loader .table {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.loader .table .icon {
-  width: 30px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-.loader .table .icon img {
-  max-height: 100px;
-}
-.loader .table .icon .knife {
-  max-width: 70px;
+  animation: shake 0.4s 4s;
 }
 .loader .table .plate {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /*            .circle{
-                  width: 60px;
-                  height: 60px;
-                  position: absolute;
-                  z-index: 2;
-                  border: 3px $black solid;
-                  border-radius: 40px;
-              }*/
-}
-.loader .table .plate .ring {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px #ffffff solid;
   position: absolute;
-  background: conic-gradient(#000000, #eaeaea);
-  border-radius: 50px;
+  transform: rotate(45deg);
+  box-sizing: border-box;
 }
-.loader .table .plate .center {
-  width: 60px;
-  height: 60px;
+.loader .table .plate::before {
+  content: "";
   position: absolute;
-  z-index: 1;
-  background-color: #ffffff;
-  border-radius: 35px;
+  box-sizing: border-box;
+  inset: -10px;
+  border-radius: 50%;
+  border: 25px solid #000000;
+  animation: fillplate 4s linear;
 }
 
-/*l'idée finale étant que ring tourne pour donner
- l'impression de chargement,
-et que fork et knife se secouent légèrement
-(inclinaison à gauche puis à droite,
-faible et vif, comme un tremblement)*/
 body {
   font-family: Roboto;
   font-weight: 500;
@@ -194,6 +203,18 @@ header .header__location input {
   height: 25px;
   border: none;
   background-color: transparent;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.header .fa-solid {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 30px;
 }
 
 .button__gradient {
@@ -486,18 +507,6 @@ footer .info .info__contact {
     gap: 20px;
   }
 }
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.header .fa-solid {
-  display: inline-block;
-  position: absolute;
-  left: 30px;
-  top: 30px;
-}
-
 .restaurant {
   width: 100%;
   box-sizing: border-box;
@@ -684,10 +693,10 @@ footer .info .info__contact {
 .recipes__choice .recipes__choice--extend .recipes__text p {
   margin: 0;
 }
-.recipes__choice .recipes__choice--extend .choice-price {
+.recipes__choice .recipes__choice--extend .recipes__price {
   padding: 0 20px 15px 0;
-  align-self: flex-end;
   text-align: right;
+  align-self: flex-end;
 }
 .recipes__choice .recipes__choice--extend .recipes__selected {
   height: 70px;

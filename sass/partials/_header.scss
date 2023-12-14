@@ -26,3 +26,15 @@ header{
         }        
     }
 }
+
+.header {
+  @include row;
+  justify-content: center;
+
+  .fa-solid {
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+}
