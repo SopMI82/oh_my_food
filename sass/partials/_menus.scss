@@ -1,4 +1,4 @@
-.menu-header {
+.header {
   @include row;
   justify-content: center;
 
@@ -14,7 +14,7 @@
   @include boxbasic;
   @include column;
 
-  .photo {
+  .restaurant__photo {
     @include photo;
     margin-bottom: -40px;
 
@@ -25,7 +25,7 @@
   }
 }
 
-.main-course {
+.restaurant__menu {
   @include boxbasic;
   @include column;
   justify-content: center;
@@ -35,7 +35,7 @@
   border-radius: 40px 40px 0 0;
   padding: 20px 15px 20px 15px;
 
-  .restaurant-info {
+  .restaurant__info {
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -49,7 +49,7 @@
       font-weight: 500;
     }
 
-    .card-rate {
+    .restaurant__rate {
       button {
         background-color: $light-grey;
 
@@ -64,31 +64,31 @@
     display: none;
   }
 
-  .menu-container {
+  .menu__container {
     display: flex;
     flex-direction: column;
   }
 
-  .restaurant-menu {
+  .recipes {
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin: 30px 0;
+  }
 
-    h2 {
-      font-family: $txt-main;
-      @include thin;
-      text-transform: uppercase;
-      margin: 0;
-    }
+  h2 {
+    font-family: $txt-main;
+    @include thin;
+    text-transform: uppercase;
+    margin: 0;
+  }
 
-    .style-bar {
-      width: 40px;
-      height: 3px;
-      background-color: $nouveau;
-    }
+  .recipes__stylebar {
+    width: 40px;
+    height: 3px;
+    background-color: $nouveau;
   }
 
   //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
@@ -110,12 +110,12 @@
     padding-right: 5%;
     margin: 0;
 
-    .navtab {
+    .nav--tab {
       @include boxbasic;
       @include row;
       justify-content: space-between;
 
-      .menu-container {
+      .menu__container {
         width: 510px;
         padding: 10px;
         display: flex;
@@ -125,11 +125,11 @@
           width: 1600px;
           overflow: hidden;
           display: flex;
-          flex-direction: row;                  
+          flex-direction: row;
           justify-content: space-evenly;
           align-self: center;
 
-          .restaurant-menu {
+          .recipes {
             width: 500px;
             padding: 15px;
             margin: 0;
@@ -137,17 +137,56 @@
         }
       }
     }
+    // menu de navigation en mode tablette
+
+    .nav--tab {
+      @include boxbasic;
+      @include row;
+
+      .navigation {
+        @include boxbasic;
+        @include column;
+        justify-content: space-between;
+        width: 25%;
+        padding: 25px 0;
+        border-right: 4px $nouveau solid;
+
+        .recipes_button {
+          padding: 10px;
+          border: none;
+          background-color: $light-grey;
+          text-align: left;
+          cursor: pointer;
+        }
+        .recipes_button:focus {
+          border-bottom: 4px $nouveau solid;
+          color: $dark-grey;
+          h2{
+            @include fat;
+          }
+        }
+      }
+
+      .menu__container--extend {
+        h2 {
+          display: none;
+        }
+        .recipes__stylebar {
+          display: none;
+        }
+      }
+    }
   }
 }
 
-.card-choice {
+.recipes__choice {
   @include boxbasic;
   @include card;
   @include ombrage-medium;
   height: 70px;
   overflow: hidden;
 
-  .card-choice-extend {
+  .recipes__choice--extend {
     @include card;
     width: 120%;
     height: 70px;
@@ -157,7 +196,7 @@
     align-items: center;
     transition: width 0.4s;
 
-    .choice-text {
+    .recipes__text {
       @include column;
       padding-left: 15px;
       gap: 5px;
@@ -173,7 +212,7 @@
       text-align: right;
     }
 
-    .selected {
+    .recipes__selected {
       height: 70px;
       background-color: $third-color;
       border-radius: 0 15px 15px 0;
@@ -186,7 +225,7 @@
     }
   }
 
-  .card-choice-extend:hover {
+  .recipes__choice--extend:hover {
     width: 100%;
   }
 }

@@ -1,11 +1,11 @@
 // bouton dégradé
-.button-fantasy {
+.button__gradient {
   @include button--fantasy;
   @include ombrage-medium;
   transition: all ease-in-out 0.3s;
 }
 
-.button-fantasy:hover {
+.button__gradient:hover {
   background: $gradientreverse;
   transition: all ease-in-out 0.3s;
 }
@@ -30,7 +30,7 @@
 }
 
 //bouton coeur
-.card-rate {
+.restaurant__rate {
   display: flex;
   position: relative;
   right: 2em;
@@ -99,6 +99,9 @@
   }
 }
 
+
+//PREMIERE VERSION AVEC LES FLECHES
+
 .right {
   cursor: pointer;
 }
@@ -123,4 +126,25 @@
 
 .left:focus + .menu-container .menu__container--extend {
   transform: translateX(+510px);
+}
+
+//DEUXIEME VERSION AVEC LE MENU
+// VOIR AVEC CEDRIC CE QUE J'AI MANQUE POUR QUE CA NE MARCHE PAS
+
+.entries + .nav--tab .menu__container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+  //comment faire pour répéter l'action à chaque clic ?
+}
+
+.entries:focus + .nav--tab .navigation .menu__container .menu__container--extend {
+  transform: translateX(510px);
+}
+
+.desserts + .navigation .nav--tab .menu__container .menu__container--extend {
+  transition: transform 0.7s ease-in-out;
+    //comment faire pour répéter l'action à chaque clic ?
+}
+
+.desserts:focus + .navigation .nav--tab .menu__container .menu__container--extend {
+  transform: translateX(-510px);
 }

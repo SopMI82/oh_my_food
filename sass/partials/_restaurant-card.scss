@@ -8,7 +8,7 @@
     overflow: hidden;
     justify-content: space-between;
 
-    .photo{
+    .restaurant__photo{
         @include photo;
         @include row;
         img{
