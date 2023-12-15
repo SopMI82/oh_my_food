@@ -10,9 +10,10 @@
   gap: 40px;
   margin: auto;
   z-index: 9999;
-  animation: fader-background 5s forwards;
+  animation: fader-background 4s forwards;
   .logo{
     animation: bigger 1.5s 1.5s forwards;
+    //animation: name duration timing-function delay iteration-count direction ;
   }
 }
 
