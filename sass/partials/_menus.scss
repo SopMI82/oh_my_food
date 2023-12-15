@@ -38,7 +38,7 @@
     }
 
     .restaurant__rate {
-      button {
+      span {
         background-color: $light-grey;
 
         .fa-regular {
@@ -71,12 +71,21 @@
     @include thin;
     text-transform: uppercase;
     margin: 0;
+// POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
+/*        @media (min-width: 768px) and (max-width: 1024px){
+      display: none;
+    }*/
+
   }
 
   .recipes__stylebar {
     width: 40px;
     height: 3px;
     background-color: $nouveau;
+// POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
+/*    @media (min-width: 768px) and (max-width: 1024px){
+      display: none;
+    }*/
   }
 
   //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
@@ -125,8 +134,8 @@
         }
       }
     }
-    // menu de navigation en mode tablette
 
+    // debut du menu lateral de navigation en mode tablette (choix 2)**************************************
     .nav--tab {
       @include boxbasic;
       @include row;
@@ -154,16 +163,8 @@
           }
         }
       }
-
-      .menu__container--extend {
-        h2 {
-          display: none;
-        }
-        .recipes__stylebar {
-          display: none;
-        }
-      }
     }
+// fin du menu lateral de navigation en mode tablette (choix 2)**************************************
   }
 }
 

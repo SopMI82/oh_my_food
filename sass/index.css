@@ -1,37 +1,124 @@
 @keyframes shake {
   0% {
     transform: scaleX(1);
+    opacity: 1;
   }
   10%, 30%, 50%, 70%, 90% {
     transform: rotate(-2deg);
   }
-  20%, 40%, 60%, 80% {
+  20%, 40%, 60% {
     transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+    opacity: 1;
   }
   100% {
     transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes fork {
+  0% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(-2deg);
+  }
+  20%, 40%, 60% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+@keyframes knife {
+  0% {
+    transform: translateX(520px);
+    opacity: 1;
+  }
+  20%, 40%, 60% {
+    transform: rotate(-2deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: rotate(2deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
   }
 }
 @keyframes fillplate {
   0% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
             clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    opacity: 1;
   }
-  15% {
+  25% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
             clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
   }
-  45% {
+  50% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
             clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
-  80% {
+  75% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
             clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    opacity: 1;
   }
-  100% {
+  90% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
             clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fader-background {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(2);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(2);
+  }
+  80% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  98% {
+    transform: scale3d(2);
+  }
+  100% {
+    opacity: 0;
   }
 }
 .loader {
@@ -42,17 +129,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  background-color: #ffffff;
+  gap: 40px;
   margin: auto;
   z-index: 9999;
+  animation: fader-background 5s forwards;
 }
-.loader .table {
+.loader .logo {
+  animation: bigger 1.5s 1.5s forwards;
+}
+
+.table2 {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: shake 0.4s 4s;
+  justify-content: space-evenly;
 }
-.loader .table .plate {
+.table2 .fork {
+  height: 120px;
+  position: relative;
+  right: 75px;
+  animation: fork 3s forwards;
+}
+.table2 .knife {
+  height: 120px;
+  position: relative;
+  left: 75px;
+  animation: knife 3s forwards;
+}
+
+.plate {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -61,14 +165,15 @@
   transform: rotate(45deg);
   box-sizing: border-box;
 }
-.loader .table .plate::before {
+
+.plate::before {
   content: "";
   position: absolute;
   box-sizing: border-box;
   inset: -10px;
   border-radius: 50%;
   border: 25px solid #000000;
-  animation: fillplate 4s linear;
+  animation: fillplate 3.5s forwards;
 }
 
 body {
@@ -247,14 +352,15 @@ header .header__location input {
   right: 80px;
   z-index: 1;
   width: 80px;
-  height: 30px;
+  height: 15px;
+  padding: 5px;
+  font-size: 0.8em;
   background-color: #99e2d0;
   color: #008766;
   border: none;
   border-radius: 3px;
-  line-height: 30px;
+  line-height: 15px;
   justify-content: center;
-  font-weight: 700;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
@@ -266,28 +372,29 @@ header .header__location input {
   width: 30px;
   height: 30px;
 }
-.restaurant__rate button {
+.restaurant__rate span {
   border: none;
   position: relative;
   align-self: center;
   background-color: #ffffff;
   padding: 0;
 }
-.restaurant__rate button .fa-heart {
+.restaurant__rate span .fa-heart {
   font-size: 2em;
 }
-.restaurant__rate button .fa-regular {
+.restaurant__rate span .fa-regular {
   display: flex;
   position: absolute;
   background-color: #ffffff;
+  color: #000000;
   z-index: 1;
   opacity: 1;
   transition: opacity 0.4s;
 }
-.restaurant__rate button .fa-regular:hover {
+.restaurant__rate span .fa-regular:hover {
   opacity: 0;
 }
-.restaurant__rate button .fa-solid {
+.restaurant__rate span .fa-solid {
   display: flex;
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -549,10 +656,10 @@ footer .info .info__contact {
   font-size: 1.4em;
   font-weight: 500;
 }
-.restaurant__menu .restaurant__info .restaurant__rate button {
+.restaurant__menu .restaurant__info .restaurant__rate span {
   background-color: #f6f6f6;
 }
-.restaurant__menu .restaurant__info .restaurant__rate button .fa-regular {
+.restaurant__menu .restaurant__info .restaurant__rate span .fa-regular {
   background-color: #f6f6f6;
 }
 .restaurant__menu .navigation {
@@ -575,11 +682,17 @@ footer .info .info__contact {
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
+  /*        @media (min-width: 768px) and (max-width: 1024px){
+        display: none;
+      }*/
 }
 .restaurant__menu .recipes__stylebar {
   width: 40px;
   height: 3px;
   background-color: #008766;
+  /*    @media (min-width: 768px) and (max-width: 1024px){
+        display: none;
+      }*/
 }
 @media (min-width: 1025px) {
   .restaurant__menu {
@@ -654,12 +767,6 @@ footer .info .info__contact {
   }
   .restaurant__menu .nav--tab .navigation .recipes_button:focus h2 {
     font-weight: 700;
-  }
-  .restaurant__menu .nav--tab .menu__container--extend h2 {
-    display: none;
-  }
-  .restaurant__menu .nav--tab .menu__container--extend .recipes__stylebar {
-    display: none;
   }
 }
 
