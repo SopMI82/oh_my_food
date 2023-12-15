@@ -6,34 +6,52 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  background-color: $white;
+  gap: 40px;
   margin: auto;
   z-index: 9999;
-             display: none; /*cache le loader*/
-
-  .table {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: shake 0.4s 4s;
-
-    .plate {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 10px $white solid;
-      position: absolute;
-      transform: rotate(45deg);
-      box-sizing: border-box;
-    }
-    .plate::before {
-      content: "";
-      position: absolute;
-      box-sizing: border-box;
-      inset: -10px;
-      border-radius: 50%;
-      border: 25px solid $black;
-      animation: fillplate 4s linear;
-    }
+  animation: fader-background 5s forwards;
+  .logo{
+    animation: bigger 1.5s 1.5s forwards;
   }
 }
+
+
+.table2 {
+  display: flex;
+justify-content: space-evenly;
+  .fork{
+    height: 120px;
+    position: relative;
+    right: 75px;
+  animation: fork 3s forwards;
+  }
+  .knife{
+    height: 120px;
+     position: relative;
+    left: 75px;
+  animation: knife 3s forwards;
+  }
+}
+
+
+.plate {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 10px $white solid;
+  position: absolute;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+}
+    
+.plate::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  inset: -10px;
+  border-radius: 50%;
+  border: 25px solid $black;
+  animation: fillplate 3.5s forwards;
+}
+
