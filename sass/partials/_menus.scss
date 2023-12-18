@@ -29,12 +29,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 20px;
 
     h1 {
       display: block;
       font-family: $txt-fantasy;
       @include tall;
       font-weight: 500;
+      margin: 0;
     }
 
     .restaurant__rate {
@@ -71,19 +73,18 @@
     @include thin;
     text-transform: uppercase;
     margin: 0;
-// POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
-/*        @media (min-width: 768px) and (max-width: 1024px){
+    // POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
+    /*        @media (min-width: 768px) and (max-width: 1024px){
       display: none;
     }*/
-
   }
 
   .recipes__stylebar {
     width: 40px;
     height: 3px;
     background-color: $nouveau;
-// POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
-/*    @media (min-width: 768px) and (max-width: 1024px){
+    // POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
+    /*    @media (min-width: 768px) and (max-width: 1024px){
       display: none;
     }*/
   }
@@ -158,13 +159,13 @@
         .recipes_button:focus {
           border-bottom: 4px $third-color solid;
           color: $dark-grey;
-          h2{
+          h2 {
             @include fat;
           }
         }
       }
     }
-// fin du menu lateral de navigation en mode tablette (choix 2)**************************************
+    // fin du menu lateral de navigation en mode tablette (choix 2)**************************************
   }
 }
 
@@ -212,9 +213,11 @@
         line-height: 70px;
       }
     }
+    &:hover {
+      width: 100%;
+    }
   }
-
-  .recipes__choice--extend:hover {
-    width: 100%;
+  &:hover {
+    @include ombrage-dark;
   }
 }

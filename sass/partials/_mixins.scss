@@ -42,11 +42,14 @@
     margin: 25px auto;
     justify-self: center;
     line-height: 50px;
-
 }
 
 @mixin ombrage-medium{
     box-shadow: 0px 4px 15px 0px #0000001A;
+}
+
+@mixin ombrage-dark{
+    box-shadow: 0px 8px 15px 0px #00000041;
 }
 
 @mixin txt__main{
