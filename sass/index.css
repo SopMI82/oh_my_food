@@ -802,7 +802,6 @@ footer .info .info__contact {
 .recipes__choice .recipes__choice--extend .recipes__text {
   display: flex;
   flex-direction: column;
-  width: 90%;
   padding-left: 15px;
   gap: 5px;
 }

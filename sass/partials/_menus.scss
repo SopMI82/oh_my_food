@@ -114,7 +114,6 @@
   @include boxbasic;
   @include card;
   @include ombrage-medium;
-
   height: 70px;
   overflow: hidden;
 
@@ -131,7 +130,6 @@
 
     .recipes__text {
       @include column;
-      width: 90%;
       padding-left: 15px;
       gap: 5px;
 
