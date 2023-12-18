@@ -1,3 +1,68 @@
+@keyframes fillcircle {
+  0% {
+    background: conic-gradient(black 1%, white 5%);
+  }
+  20% {
+    background: conic-gradient(black 5%, white 12%);
+  }
+  23% {
+    background: conic-gradient(black 10%, white 20%);
+  }
+  28% {
+    background: conic-gradient(black 15%, white 25%);
+  }
+  30% {
+    background: conic-gradient(black 20%, white 30%);
+  }
+  33% {
+    background: conic-gradient(black 25%, white 35%);
+  }
+  35% {
+    background: conic-gradient(black 30%, white 40%);
+  }
+  37% {
+    background: conic-gradient(black 35%, white 45%);
+  }
+  39% {
+    background: conic-gradient(black 40%, white 50%);
+  }
+  42% {
+    background: conic-gradient(black 45%, white 55%);
+  }
+  45% {
+    background: conic-gradient(black 50%, white 60%);
+  }
+  48% {
+    background: conic-gradient(black 55%, white 65%);
+  }
+  55% {
+    background: conic-gradient(black 60%, white 70%);
+  }
+  62% {
+    background: conic-gradient(black 65%, white 75%);
+  }
+  72% {
+    background: conic-gradient(black 70%, white 80%);
+  }
+  78% {
+    background: conic-gradient(black 75%, white 85%);
+  }
+  80% {
+    background: conic-gradient(black 80%, white 90%);
+  }
+  82% {
+    background: conic-gradient(black 85%, white 95%);
+  }
+  88% {
+    background: conic-gradient(black 90%, white 99%);
+  }
+  92% {
+    background: conic-gradient(black 95%, white 100%);
+  }
+  100% {
+    background: conic-gradient(black 100%, black 100%);
+  }
+}
 @keyframes shake {
   0% {
     transform: scaleX(1);
@@ -23,13 +88,13 @@
     transform: scaleX(1);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: rotate(-2deg);
+    transform: rotate(-3deg);
   }
   20%, 40%, 60% {
-    transform: rotate(2deg);
+    transform: rotate(3deg);
   }
   80% {
-    transform: rotate(2deg);
+    transform: rotate(3deg);
   }
   100% {
     transform: scaleX(1);
@@ -40,18 +105,40 @@
     transform: translateX(520px);
   }
   20%, 40%, 60% {
-    transform: rotate(-2deg);
+    transform: rotate(-3deg);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: rotate(2deg);
+    transform: rotate(3deg);
   }
   80% {
-    transform: rotate(-2deg);
+    transform: rotate(-3deg);
   }
   100% {
     transform: translateX(0);
   }
 }
+/*@keyframes fillplate {
+    0%   {
+        clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0);
+ //       opacity: 1;
+    }
+    25%  {
+        clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0);
+    }
+    50%  {
+        clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%);
+    }
+    75%  {
+        clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%);
+//        opacity: 1;
+    }
+    90% {
+        clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0);
+    }
+    100%{
+//        opacity: 0;
+    }    
+}*/
 @keyframes fillplate {
   0% {
     -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
@@ -136,21 +223,21 @@
 .table2 .fork {
   height: 120px;
   position: relative;
-  right: 75px;
+  right: 15px;
   animation: fork 3s forwards;
 }
 .table2 .knife {
   height: 120px;
   position: relative;
-  left: 75px;
+  left: 15px;
   animation: knife 3s forwards;
 }
 
-.plate {
+/*.plate {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 10px #ffffff solid;
+  border: 10px $white solid;
   position: absolute;
   transform: rotate(45deg);
   box-sizing: border-box;
@@ -162,8 +249,31 @@
   box-sizing: border-box;
   inset: -10px;
   border-radius: 50%;
-  border: 25px solid #000000;
-  animation: fillplate 3.5s forwards;
+  border: 25px solid $black;
+  animation: fillplate 1.5s forwards;
+}*/
+.plate {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plate .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  background: white;
+  animation: fillcircle 3s forwards;
+}
+.plate .round {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
 }
 
 body {
@@ -742,7 +852,7 @@ footer .info .info__contact {
     justify-content: space-between;
     width: 25%;
     padding: 25px 0;
-    border-right: 4px #008766 solid;
+    border-right: 4px #99e2d0 solid;
   }
   .restaurant__menu .nav--tab .navigation .recipes_button {
     padding: 10px;
@@ -752,7 +862,7 @@ footer .info .info__contact {
     cursor: pointer;
   }
   .restaurant__menu .nav--tab .navigation .recipes_button:focus {
-    border-bottom: 4px #008766 solid;
+    border-bottom: 4px #99e2d0 solid;
     color: #353535;
   }
   .restaurant__menu .nav--tab .navigation .recipes_button:focus h2 {

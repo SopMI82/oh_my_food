@@ -146,7 +146,7 @@
         justify-content: space-between;
         width: 25%;
         padding: 25px 0;
-        border-right: 4px $nouveau solid;
+        border-right: 4px $third-color solid;
 
         .recipes_button {
           padding: 10px;
@@ -156,7 +156,7 @@
           cursor: pointer;
         }
         .recipes_button:focus {
-          border-bottom: 4px $nouveau solid;
+          border-bottom: 4px $third-color solid;
           color: $dark-grey;
           h2{
             @include fat;
