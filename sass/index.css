@@ -516,7 +516,7 @@ header .header__location input {
   width: 24px;
   height: 24px;
   line-height: 24px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 8px;
   position: absolute;
   background-color: #9256dc;
   border-radius: 12px;
@@ -729,6 +729,8 @@ footer .info .info__contact {
   display: none;
 }
 .restaurant__menu .menu__container {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -740,14 +742,17 @@ footer .info .info__contact {
   gap: 10px;
   margin: 30px 0;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .restaurant__menu .recipes {
+    width: 32%;
+    margin: auto;
+  }
+}
 .restaurant__menu h2 {
   font-family: Roboto;
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
-  /*        @media (min-width: 768px) and (max-width: 1024px){
-    display: none;
-  }*/
 }
 .restaurant__menu .recipes__stylebar {
   width: 40px;
@@ -774,6 +779,8 @@ footer .info .info__contact {
   .restaurant__menu .menu__container {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
     gap: 2%;
     font-size: 0.9em;
   }
