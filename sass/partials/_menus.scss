@@ -83,10 +83,6 @@
     width: 40px;
     height: 3px;
     background-color: $nouveau;
-    // POUR LA VERSION AVEC LE MENU LATERAL UNIQUEMENT***********************
-    /*    @media (min-width: 768px) and (max-width: 1024px){
-      display: none;
-    }*/
   }
 
   //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
@@ -101,71 +97,16 @@
 
   //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
   @media (min-width: 768px) and (max-width: 1024px) {
-    width: 90%;
-    // max-width: 1220px;
     align-self: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     margin: 0;
 
-    .nav--tab {
-      @include boxbasic;
-      @include row;
-      justify-content: space-between;
-
-      .menu__container {
-        width: 510px;
-        padding: 10px;
-        display: flex;
-        overflow: hidden;
-
-        .menu__container--extend {
-          width: 1600px;
-          overflow: hidden;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-evenly;
-          align-self: center;
-
-          .recipes {
-            width: 500px;
-            padding: 15px;
-            margin: 0;
-          }
-        }
-      }
+  .menu__container{
+    @include row;
+    gap: 2%;
+    font-size: 0.9em;
     }
-
-    // debut du menu lateral de navigation en mode tablette (choix 2)**************************************
-    .nav--tab {
-      @include boxbasic;
-      @include row;
-
-      .navigation {
-        @include boxbasic;
-        @include column;
-        justify-content: space-between;
-        width: 25%;
-        padding: 25px 0;
-        border-right: 4px $third-color solid;
-
-        .recipes_button {
-          padding: 10px;
-          border: none;
-          background-color: $light-grey;
-          text-align: left;
-          cursor: pointer;
-        }
-        .recipes_button:focus {
-          border-bottom: 4px $third-color solid;
-          color: $dark-grey;
-          h2 {
-            @include fat;
-          }
-        }
-      }
-    }
-    // fin du menu lateral de navigation en mode tablette (choix 2)**************************************
   }
 }
 
@@ -173,6 +114,7 @@
   @include boxbasic;
   @include card;
   @include ombrage-medium;
+
   height: 70px;
   overflow: hidden;
 
@@ -186,19 +128,25 @@
     align-items: center;
     transition: width 0.4s;
 
+
     .recipes__text {
       @include column;
+      width: 90%;
       padding-left: 15px;
       gap: 5px;
+
       h3,
       p {
         margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
 
     .recipes__price {
-      padding: 0 20px 15px 0;
-      text-align: right;
+      padding: 0 0px 15px 0;
+      text-align: center;
       align-self: flex-end;
     }
 
@@ -209,7 +157,7 @@
       text-align: center;
 
       .fa-solid {
-        color: $nouveau;
+        color: $white;
         line-height: 70px;
       }
     }
