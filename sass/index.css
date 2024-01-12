@@ -586,7 +586,7 @@ header .header__location input {
   color: #000000;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.4s;
+  transition: opacity 0.4s ease-in-out;
 }
 .restaurant__rate2 .fa-regular:hover {
   opacity: 0;
@@ -962,6 +962,7 @@ footer .info .info__contact {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   height: 70px;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
 }
 .restaurant__menu .recipes__choice .recipes__choice--extend {
   background-color: #ffffff;
@@ -972,7 +973,7 @@ footer .info .info__contact {
   display: grid;
   grid-template-columns: 70% 15% 15%;
   align-items: center;
-  transition: width 0.4s;
+  transition: width 0.3s ease-in-out;
 }
 .restaurant__menu .recipes__choice .recipes__choice--extend .recipes__text {
   display: flex;
@@ -1006,8 +1007,9 @@ footer .info .info__contact {
   line-height: 70px;
 }
 .restaurant__menu .recipes__choice .recipes__choice--extend:hover {
-  width: 100%;
+  width: 101%;
 }
 .restaurant__menu .recipes__choice:hover {
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2549019608);
+  transition: ease-in-out 0.3s;
 }/*# sourceMappingURL=index.css.map */

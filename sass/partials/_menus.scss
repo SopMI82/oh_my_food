@@ -178,9 +178,9 @@
   @include boxbasic;
   @include card;
   @include ombrage-medium;
-
   height: 70px;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
 
   .recipes__choice--extend {
     @include card;
@@ -190,7 +190,7 @@
     display: grid;
     grid-template-columns: 70% 15% 15%;
     align-items: center;
-    transition: width 0.4s;
+    transition: width 0.3s ease-in-out;
 
 
     .recipes__text {
@@ -229,11 +229,12 @@
     }
 
     &:hover {
-      width: 100%;
+      width: 101%;
     }
   }
 
   &:hover {
     @include ombrage-dark;
+    transition: ease-in-out 0.3s;
   }
 }}

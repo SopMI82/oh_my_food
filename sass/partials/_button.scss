@@ -99,7 +99,7 @@
     color: $black;
     z-index: 1;
     opacity: 1;
-    transition: opacity 0.4s;
+    transition: opacity 0.4s ease-in-out;
   }
 
   .fa-regular:hover {
