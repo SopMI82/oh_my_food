@@ -13,6 +13,7 @@ footer{
             @include txt__fantasy;
             @include tall;
             color: $white;
+            margin: 0;
             
             @media (min-width : 1024px) {
                 text-align: end;
@@ -35,25 +36,20 @@ footer{
         }
     }
     
-    //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
-    @media (min-width : 1024px) {
+    //  ***   MEDIA QUERIES DESKTOP & TABLETTE    ***   MEDIA QUERIES DESKTOP & TABLETTE  ***
+    @media (min-width : 768px) {
         justify-content: end;
         .info{
-            width: 75%;
+            width: 100%;
             justify-content: right;
-            gap: 5%;
+            gap: 2%;
             flex-direction: row-reverse;
             .info__contact{
                 @include row;
                 justify-content: flex-end;
                 align-items: center;
-                gap: 20px;
+                gap: 15px;
              }
         }           
-    }
-
-    //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
-    @media (min-width : 768px) and (max-width: 1024px) {
-
     }
 }

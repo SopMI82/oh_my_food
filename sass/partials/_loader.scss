@@ -11,32 +11,29 @@
   margin: auto;
   z-index: 9999;
   animation: fader-background 4s forwards;
-  .logo{
+  .logo {
     animation: bigger 1.5s 1.5s forwards;
-    //animation: name duration timing-function delay iteration-count direction ;
   }
 }
-
 
 .table2 {
   display: flex;
-justify-content: space-evenly;
-  .fork{
+  justify-content: space-evenly;
+  .fork {
     height: 120px;
     position: relative;
-    right: 75px;
-  animation: fork 3s forwards;
+    right: 15px;
+    animation: fork 3s forwards;
   }
-  .knife{
+  .knife {
     height: 120px;
-     position: relative;
-    left: 75px;
-  animation: knife 3s forwards;
+    position: relative;
+    left: 15px;
+    animation: knife 3s forwards;
   }
 }
 
-
-.plate {
+/*.plate {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -53,6 +50,30 @@ justify-content: space-evenly;
   inset: -10px;
   border-radius: 50%;
   border: 25px solid $black;
-  animation: fillplate 3.5s forwards;
-}
+  animation: fillplate 1.5s forwards;
+}*/
+.plate {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    background: white;
+    animation: fillcircle 3s forwards;
 
+  }
+  .round {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+
+  }
+}

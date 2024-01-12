@@ -5,6 +5,8 @@
     height: 250px;
     overflow: hidden;
     justify-content: space-between;
+    transition: all ease-in-out 0.4s;
+
 
     .restaurant__photo{
         @include photo;
@@ -38,4 +40,8 @@
             }
 // pour le coeur voir page button
     }
+&:hover{
+    @include ombrage-dark;
+
+}
 }
