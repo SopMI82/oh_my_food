@@ -796,62 +796,62 @@ footer .info .info__contact {
 }
 .restaurant__menu .menu__container .recipes:first-child {
   animation: slider_menu 0.5s forwards;
-}
-.restaurant__menu .menu__container .recipes:first-child .recipes__choice:first-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 0.3s forwards;
-}
-.restaurant__menu .menu__container .recipes:first-child .recipes__choice:nth-child(2) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 0.6s forwards;
-}
-.restaurant__menu .menu__container .recipes:first-child .recipes__choice:nth-child(3) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 0.9s forwards;
-}
-.restaurant__menu .menu__container .recipes:first-child .recipes__choice:last-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 1.2s forwards;
+  /*       .recipes__choice:first-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 0.3s forwards;
+        }
+        .recipes__choice:nth-child(1) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 0.6s forwards;
+        }
+        .recipes__choice:nth-child(2) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 0.9s forwards;
+        }
+        .recipes__choice:last-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 1.2s forwards;
+        } */
 }
 .restaurant__menu .menu__container .recipes:nth-child(2) {
   opacity: 0;
   animation: slider_menu 0.5s 0.5s forwards;
-}
-.restaurant__menu .menu__container .recipes:nth-child(2) .recipes__choice:first-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 1.5s forwards;
-}
-.restaurant__menu .menu__container .recipes:nth-child(2) .recipes__choice:nth-child(2) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 1.8s forwards;
-}
-.restaurant__menu .menu__container .recipes:nth-child(2) .recipes__choice:nth-child(3) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 2.1s forwards;
-}
-.restaurant__menu .menu__container .recipes:nth-child(2) .recipes__choice:last-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 2.4s forwards;
+  /*       .recipes__choice:first-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 1.5s forwards;
+        }
+        .recipes__choice:nth-child(1) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 1.8s forwards;
+        }
+        .recipes__choice:nth-child(2) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 2.1s forwards;
+        }
+        .recipes__choice:last-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 2.4s forwards;
+        } */
 }
 .restaurant__menu .menu__container .recipes:last-child {
   opacity: 0;
   animation: slider_menu 0.5s 1s forwards;
-}
-.restaurant__menu .menu__container .recipes:last-child .recipes__choice:first-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 2.7s forwards;
-}
-.restaurant__menu .menu__container .recipes:last-child .recipes__choice:nth-child(2) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 3s forwards;
-}
-.restaurant__menu .menu__container .recipes:last-child .recipes__choice:nth-child(3) {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 3.3s forwards;
-}
-.restaurant__menu .menu__container .recipes:last-child .recipes__choice:last-child {
-  opacity: 0;
-  animation: appear_elementsmenu 0.3s 3.6s forwards;
+  /*       .recipes__choice:first-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 2.7s forwards;
+        }
+        .recipes__choice:nth-child(1) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 3s forwards;
+        }
+        .recipes__choice:nth-child(2) {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 3.3s forwards;
+        }
+        .recipes__choice:last-child {
+          opacity: 0;
+          animation: appear_elementsmenu 0.3s 3.6s forwards;
+        } */
 }
 .restaurant__menu .recipes {
   width: 100%;
