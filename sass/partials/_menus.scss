@@ -173,6 +173,7 @@
   @include boxbasic;
   @include card;
   @include ombrage-medium;
+
   height: 70px;
   overflow: hidden;
 
@@ -186,10 +187,15 @@
     align-items: center;
     transition: width 0.4s;
 
+
     .recipes__text {
       @include column;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       padding-left: 15px;
       gap: 5px;
+
       h3,
       p {
         margin: 0;
@@ -197,8 +203,8 @@
     }
 
     .recipes__price {
-      padding: 0 20px 15px 0;
-      text-align: right;
+      padding: 0 0px 15px 0;
+      text-align: center;
       align-self: flex-end;
     }
 
