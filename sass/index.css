@@ -198,6 +198,7 @@
     opacity: 0;
   }
 }
+@keyframes slider {}
 .loader {
   width: 100vw;
   height: 100vh;
@@ -505,71 +506,6 @@ header .header__location input {
           background-clip: text;
 }
 
-.chevron {
-  display: none;
-  width: 70px;
-  height: 70px;
-  margin: 120px 0;
-  font-size: 25px;
-  background-color: #ffffff;
-  border-radius: 35px;
-  border: none;
-  justify-items: center;
-  color: #353535;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
-}
-.chevron :hover {
-  color: #9256dc;
-}
-.chevron i {
-  padding: 0;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .chevron {
-    display: block;
-  }
-}
-
-.right {
-  cursor: pointer;
-}
-
-.right + .menu__container .menu__container--extend {
-  transition: transform 0.7s ease-in-out;
-}
-
-.right:focus + .menu__container .menu__container--extend {
-  transform: translateX(-520px);
-}
-
-.left {
-  cursor: pointer;
-}
-
-.left + .menu__container .menu__container--extend {
-  transition: transform 0.7s ease-in-out;
-}
-
-.left:focus + .menu__container .menu__container--extend {
-  transform: translateX(510px);
-}
-
-.entries + .nav--tab .menu__container .menu__container--extend {
-  transition: transform 0.7s ease-in-out;
-}
-
-.entries:focus + .nav--tab .navigation .menu__container .menu__container--extend {
-  transform: translateX(510px);
-}
-
-.desserts + .navigation .nav--tab .menu__container .menu__container--extend {
-  transition: transform 0.7s ease-in-out;
-}
-
-.desserts:focus + .navigation .nav--tab .menu__container .menu__container--extend {
-  transform: translateX(-510px);
-}
-
 .howto__card {
   display: flex;
   flex-direction: row;
@@ -580,7 +516,7 @@ header .header__location input {
   width: 24px;
   height: 24px;
   line-height: 24px;
-  margin: 0 0 0 20px;
+  margin: 0 0 0 8px;
   position: absolute;
   background-color: #9256dc;
   border-radius: 12px;
@@ -793,6 +729,8 @@ footer .info .info__contact {
   display: none;
 }
 .restaurant__menu .menu__container {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
@@ -804,22 +742,22 @@ footer .info .info__contact {
   gap: 10px;
   margin: 30px 0;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .restaurant__menu .recipes {
+    width: 32%;
+    margin: auto;
+  }
+}
 .restaurant__menu h2 {
   font-family: Roboto;
   font-weight: 300;
   text-transform: uppercase;
   margin: 0;
-  /*        @media (min-width: 768px) and (max-width: 1024px){
-    display: none;
-  }*/
 }
 .restaurant__menu .recipes__stylebar {
   width: 40px;
   height: 3px;
   background-color: #008766;
-  /*    @media (min-width: 768px) and (max-width: 1024px){
-    display: none;
-  }*/
 }
 @media (min-width: 1025px) {
   .restaurant__menu {
@@ -833,67 +771,18 @@ footer .info .info__contact {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .restaurant__menu {
-    width: 90%;
     align-self: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     margin: 0;
   }
-  .restaurant__menu .nav--tab {
-    width: 100%;
-    box-sizing: border-box;
+  .restaurant__menu .menu__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-  }
-  .restaurant__menu .nav--tab .menu__container {
-    width: 510px;
-    padding: 10px;
-    display: flex;
-    overflow: hidden;
-  }
-  .restaurant__menu .nav--tab .menu__container .menu__container--extend {
-    width: 1600px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-self: center;
-  }
-  .restaurant__menu .nav--tab .menu__container .menu__container--extend .recipes {
-    width: 500px;
-    padding: 15px;
-    margin: 0;
-  }
-  .restaurant__menu .nav--tab {
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-  }
-  .restaurant__menu .nav--tab .navigation {
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25%;
-    padding: 25px 0;
-    border-right: 4px #99e2d0 solid;
-  }
-  .restaurant__menu .nav--tab .navigation .recipes_button {
-    padding: 10px;
-    border: none;
-    background-color: #f6f6f6;
-    text-align: left;
-    cursor: pointer;
-  }
-  .restaurant__menu .nav--tab .navigation .recipes_button:focus {
-    border-bottom: 4px #99e2d0 solid;
-    color: #353535;
-  }
-  .restaurant__menu .nav--tab .navigation .recipes_button:focus h2 {
-    font-weight: 700;
+    gap: 2%;
+    font-size: 0.9em;
   }
 }
 
@@ -929,6 +818,9 @@ footer .info .info__contact {
 .recipes__choice .recipes__choice--extend .recipes__text h3,
 .recipes__choice .recipes__choice--extend .recipes__text p {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .recipes__choice .recipes__choice--extend .recipes__price {
   padding: 0 0px 15px 0;
@@ -942,7 +834,7 @@ footer .info .info__contact {
   text-align: center;
 }
 .recipes__choice .recipes__choice--extend .recipes__selected .fa-solid {
-  color: #008766;
+  color: #ffffff;
   line-height: 70px;
 }
 .recipes__choice .recipes__choice--extend:hover {
