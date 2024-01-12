@@ -646,6 +646,8 @@ header .header__location input {
 }
 .restaurant__card .restaurant__photo img {
   width: 100%;
+  display: flex;
+  flex-shrink: 0;
   height: -moz-fit-content;
   height: fit-content;
   align-self: center;

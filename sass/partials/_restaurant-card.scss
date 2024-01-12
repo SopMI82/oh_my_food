@@ -13,6 +13,8 @@
         @include row;
         img{
             width: 100%;
+            display: flex;
+            flex-shrink: 0;
             height: fit-content;
             align-self: center;
         }
