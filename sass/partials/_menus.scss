@@ -39,16 +39,13 @@
       margin: 0;
     }
 
-    .restaurant__rate {
-      span {
-        background-color: $light-grey;
-
-        .fa-regular {
-          background-color: $light-grey;
-        }
+    .restaurant__rate2 {
+      position: relative;
+      right: 0;
+      bottom: 0;
       }
     }
-  }
+  
 
   .navigation {
     display: none;
@@ -57,9 +54,10 @@
   .menu__container {
     @include boxbasic;
     @include column;
-    .recipes:first-child{
+
+    .recipes:first-child {
       animation: slider_menu 0.5s forwards;
-/*       .recipes__choice:first-child {
+      /*       .recipes__choice:first-child {
         opacity: 0;
         animation: appear_elementsmenu 0.3s 0.3s forwards;
       }
@@ -76,10 +74,11 @@
         animation: appear_elementsmenu 0.3s 1.2s forwards;
       } */
     }
-    .recipes:nth-child(2){
+
+    .recipes:nth-child(2) {
       opacity: 0;
       animation: slider_menu 0.5s 0.5s forwards;
-/*       .recipes__choice:first-child {
+      /*       .recipes__choice:first-child {
         opacity: 0;
         animation: appear_elementsmenu 0.3s 1.5s forwards;
       }
@@ -96,10 +95,11 @@
         animation: appear_elementsmenu 0.3s 2.4s forwards;
       } */
     }
-    .recipes:last-child{
+
+    .recipes:last-child {
       opacity: 0;
       animation: slider_menu 0.5s 1s forwards;
-/*       .recipes__choice:first-child {
+      /*       .recipes__choice:first-child {
         opacity: 0;
         animation: appear_elementsmenu 0.3s 2.7s forwards;
       }
@@ -116,7 +116,7 @@
         animation: appear_elementsmenu 0.3s 3.6s forwards;
       } */
     }
-    }
+  }
 
   .recipes {
     width: 100%;
@@ -125,6 +125,7 @@
     flex-direction: column;
     gap: 10px;
     margin: 30px 0;
+
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 32%;
       margin: auto;
@@ -136,7 +137,7 @@
     @include thin;
     text-transform: uppercase;
     margin: 0;
-  
+
   }
 
   .recipes__stylebar {
@@ -162,16 +163,16 @@
     padding-right: 3%;
     margin: 0;
 
-  .menu__container{
-    @include row;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 2%;
-    font-size: 0.9em;
+    .menu__container {
+      @include row;
+      width: 100%;
+      box-sizing: border-box;
+      gap: 2%;
+      font-size: 0.9em;
+    }
+
   }
-    
-  }
-}
+
 
 .recipes__choice {
   @include boxbasic;
@@ -226,11 +227,13 @@
         line-height: 70px;
       }
     }
+
     &:hover {
       width: 100%;
     }
   }
+
   &:hover {
     @include ombrage-dark;
   }
-}
+}}

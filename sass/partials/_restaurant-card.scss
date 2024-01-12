@@ -1,49 +1,65 @@
-.restaurant__card{
+.card__container {
     @include boxbasic;
-    @include column;
-    @include card;
-    height: 250px;
-    overflow: hidden;
-    justify-content: space-between;
-    transition: all ease-in-out 0.4s;
+    display: flex;
+    position: relative;
 
-
-    .restaurant__photo{
-        @include photo;
-        @include row;
-        img{
-            width: 100%;
-            display: flex;
-            flex-shrink: 0;
-            height: fit-content;
-            align-self: center;
-        }
-    }
-
-    .restaurant__card-content{
-        @include row;
-        height: 70px;        
+    .restaurant__card {
+        @include boxbasic;
+        @include column;
+        @include card;
+        height: 250px;
+        overflow: hidden;
         justify-content: space-between;
-        padding: 10px;
-        gap: 10px;
+        flex-shrink: 0;
+        position: relative;
+        transition: all ease-in-out 0.4s;
 
-            h3{
+        .restaurant__photo {
+            @include photo;
+            @include row;
+
+            img {
+                width: 100%;
+                display: flex;
+                flex-shrink: 0;
+                height: fit-content;
+                align-self: center;
+            }
+        }
+
+        .restaurant__card-content {
+            @include column;
+            height: 70px;
+            justify-content: flex-start;
+            padding: 10px;
+            gap: 10px;
+
+            h3 {
                 @include medium;
                 @include fat;
                 color: $black;
                 margin: 0;
+                text-align: start;
             }
-            
-            p{
+
+            p {
                 @include txt__main;
                 @include thin;
                 color: $black;
                 text-align: start;
+                margin: 10px 0;
             }
-// pour le coeur voir page button
-    }
-&:hover{
-    @include ombrage-dark;
 
-}
+            // pour le coeur voir page button
+        }
+
+        &:hover {
+            @include ombrage-dark;
+        }
+    }
+
+    //  ***   MEDIA QUERIES TABLETTE & DESKTOP   ***   MEDIA QUERIES TABLETTE & DESKTOP   ***
+    @media (min-width: 768px) {
+        width: 45%;
+    }
 }

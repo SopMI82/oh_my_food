@@ -65,12 +65,52 @@
       opacity: 0;
     }
 
-
     .fa-solid {
       display: flex;
       color: transparent;
       background-image: linear-gradient($second-color, $first-color);
       background-clip: text;
     }
+  }
+}
+
+//bouton coeur
+.restaurant__rate2 {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+  z-index: 2;
+
+  .fa-heart {
+    font-size: 2.5em;
+  }
+
+  .fa-regular {
+    display: flex;
+    position: absolute;
+    background-color: $white;
+    color: $black;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+
+  .fa-regular:hover {
+    opacity: 0;
+  }
+
+  .fa-solid {
+    display: flex;
+    color: transparent;
+    background-image: linear-gradient($second-color, $first-color);
+    background-clip: text;
+    padding: 0;
   }
 }
