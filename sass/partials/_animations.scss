@@ -245,7 +245,7 @@
 
 @keyframes slider_menu {
   from {
-    transform: translateX(400px);
+    transform: translateX(150px);
     opacity: 0;
   }
 
@@ -321,6 +321,7 @@
 
 @keyframes appear_elementsmenu {
   0% {
+    transform: translateX(-250px);
     opacity: 0;
   }
 

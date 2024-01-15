@@ -172,6 +172,8 @@
     }
 
   }
+}
+
 
 
 .recipes__choice {
@@ -181,6 +183,12 @@
   height: 70px;
   overflow: hidden;
   transition: all ease-in-out 0.3s;
+
+
+    animation: appear_elementsmenu 1s 0.3s forwards;
+  
+
+
 
   .recipes__choice--extend {
     @include card;
@@ -237,4 +245,7 @@
     @include ombrage-dark;
     transition: ease-in-out 0.3s;
   }
-}}
+}
+.recipes__choice:first-child {
+    animation: appear_elementsmenu 10s forwards;
+}
