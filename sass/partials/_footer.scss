@@ -1,55 +1,57 @@
-footer{
+footer {
     @include boxbasic;
     display: flex;
     background-color: $dark-grey;
     padding: 25px;
 
 
-    .info{
+    .info {
         @include boxbasic;
         @include column;
 
-        h1{
+        h1 {
             @include txt__fantasy;
             @include tall;
             color: $white;
             margin: 0;
-            
+
             @media (min-width : 1024px) {
                 text-align: end;
             }
         }
-        
-        a{
+
+        a {
             text-decoration: none;
             color: $white;
         }
-        
-        .fa-solid{
+
+        .fa-solid {
             @include medium;
             color: $white;
         }
 
-        .info__contact{
+        .info__contact {
             @include boxbasic;
             @include column;
         }
     }
-    
+
     //  ***   MEDIA QUERIES DESKTOP & TABLETTE    ***   MEDIA QUERIES DESKTOP & TABLETTE  ***
     @media (min-width : 768px) {
         justify-content: end;
-        .info{
+
+        .info {
             width: 100%;
             justify-content: right;
             gap: 2%;
             flex-direction: row-reverse;
-            .info__contact{
+
+            .info__contact {
                 @include row;
                 justify-content: flex-end;
                 align-items: center;
                 gap: 15px;
-             }
-        }           
+            }
+        }
     }
 }

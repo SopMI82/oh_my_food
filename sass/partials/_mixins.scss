@@ -1,41 +1,41 @@
-@mixin boxbasic{
+@mixin boxbasic {
     width: 100%;
     box-sizing: border-box;
 }
 
-@mixin column{
+@mixin column {
     display: flex;
     flex-direction: column;
 }
 
-@mixin row{
+@mixin row {
     display: flex;
     flex-direction: row;
 }
 
-@mixin transparent{
+@mixin transparent {
     border: none;
     background-color: transparent;
 }
 
-@mixin photo{
+@mixin photo {
     width: 100%;
     max-height: 275px;
     overflow: hidden;
 }
 
-@mixin card{
+@mixin card {
     background-color: $white;
     border-radius: 15px;
 }
 
-@mixin button--fantasy{
+@mixin button--fantasy {
     background: $gradient;
     color: #ffffff;
     height: 50px;
     width: fit-content;
     font-size: 16px;
-    padding: 0 25px ;
+    padding: 0 25px;
     border: none;
     border-radius: 25px;
     display: flex;
@@ -44,36 +44,36 @@
     line-height: 50px;
 }
 
-@mixin ombrage-medium{
+@mixin ombrage-medium {
     box-shadow: 0px 4px 15px 0px #0000001A;
 }
 
-@mixin ombrage-dark{
+@mixin ombrage-dark {
     box-shadow: 0px 8px 15px 0px #00000041;
 }
 
-@mixin txt__main{
+@mixin txt__main {
     font-family: $txt-main;
     font-weight: 500;
 }
 
-@mixin txt__fantasy{
+@mixin txt__fantasy {
     font-family: $txt-fantasy;
     font-weight: 500;
 }
 
-@mixin medium{
+@mixin medium {
     font-size: 1.2em;
 }
 
-@mixin tall{
+@mixin tall {
     font-size: 1.4em;
 }
 
-@mixin thin{
+@mixin thin {
     font-weight: 300;
 }
 
-@mixin fat{
+@mixin fat {
     font-weight: 700;
 }

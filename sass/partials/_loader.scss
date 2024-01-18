@@ -10,21 +10,18 @@
   gap: 40px;
   margin: auto;
   z-index: 9999;
-  animation: fader-background 4s forwards;
-  .logo {
-    animation: bigger 1.5s 1.5s forwards;
-  }
 }
 
 .table2 {
   display: flex;
   justify-content: space-evenly;
+
   .fork {
     height: 120px;
     position: relative;
     right: 15px;
-    animation: fork 3s forwards;
   }
+
   .knife {
     height: 120px;
     position: relative;
@@ -33,40 +30,21 @@
   }
 }
 
-/*.plate {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 10px $white solid;
-  position: absolute;
-  transform: rotate(45deg);
-  box-sizing: border-box;
-}
-    
-.plate::before {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-  inset: -10px;
-  border-radius: 50%;
-  border: 25px solid $black;
-  animation: fillplate 1.5s forwards;
-}*/
 .plate {
   width: 120px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+
   .circle {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     position: relative;
     background: white;
-    animation: fillcircle 3s forwards;
-
   }
+
   .round {
     width: 75px;
     height: 75px;

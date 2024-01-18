@@ -28,7 +28,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px;
 
     h1 {
@@ -39,13 +39,13 @@
       margin: 0;
     }
 
-    .restaurant__rate {
-      span {
-        background-color: $light-grey;
-
+    .restaurant__rate2 {
+      position: relative;
+      padding-left: 30px;
+      right: 0;
+      bottom: 0;
         .fa-regular {
           background-color: $light-grey;
-        }
       }
     }
   }
@@ -57,7 +57,7 @@
   .menu__container {
     @include boxbasic;
     @include column;
-    }
+  }
 
   .recipes {
     width: 100%;
@@ -66,6 +66,7 @@
     flex-direction: column;
     gap: 10px;
     margin: 30px 0;
+
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 32%;
       margin: auto;
@@ -77,7 +78,7 @@
     @include thin;
     text-transform: uppercase;
     margin: 0;
-  
+
   }
 
   .recipes__stylebar {
@@ -95,6 +96,7 @@
     padding-right: 15%;
     margin: 0;
   }
+    //  ***   FIN MEDIA QUERIES DESKTOP    ***   FIN MEDIA QUERIES DESKTOP  ***
 
   //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -103,23 +105,32 @@
     padding-right: 3%;
     margin: 0;
 
-  .menu__container{
-    @include row;
-    width: 100%;
-    box-sizing: border-box;
-    gap: 2%;
-    font-size: 0.9em;
+    .menu__container {
+      @include row;
+      width: 100%;
+      box-sizing: border-box;
+      gap: 2%;
+      font-size: 0.9em;
     }
   }
+  
+    //  ***   FIN MEDIA QUERIES TABLETTE    ***   FIN MEDIA QUERIES TABLETTE  ***}
+
 }
 
 .recipes__choice {
   @include boxbasic;
   @include card;
   @include ombrage-medium;
-
   height: 70px;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+  
+
+  
+
+
 
   .recipes__choice--extend {
     @include card;
@@ -129,7 +140,7 @@
     display: grid;
     grid-template-columns: 70% 15% 15%;
     align-items: center;
-    transition: width 0.4s;
+    transition: width 0.3s ease-in-out;
 
 
     .recipes__text {
@@ -166,11 +177,14 @@
         line-height: 70px;
       }
     }
+
     &:hover {
-      width: 100%;
+      width: 101%;
     }
   }
+
   &:hover {
     @include ombrage-dark;
+    transition: ease-in-out 0.3s;
   }
 }

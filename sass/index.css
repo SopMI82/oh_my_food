@@ -63,15 +63,21 @@
     background: conic-gradient(black 100%, black 100%);
   }
 }
-@keyframes shake {
+/* @keyframes shake {
   0% {
     transform: scaleX(1);
     opacity: 1;
   }
-  10%, 30%, 50%, 70%, 90% {
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
     transform: rotate(-2deg);
   }
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     transform: rotate(2deg);
   }
   80% {
@@ -82,7 +88,7 @@
     transform: scaleX(1);
     opacity: 0;
   }
-}
+} */
 @keyframes fork {
   0% {
     transform: scaleX(1);
@@ -139,28 +145,6 @@
 //        opacity: 0;
     }    
 }*/
-@keyframes fillplate {
-  0% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-  }
-  25% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-  }
-  50% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
-            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
-  }
-  75% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-  }
-  90% {
-    -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
-            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
-  }
-}
 @keyframes fader-background {
   0% {
     opacity: 1;
@@ -198,7 +182,106 @@
     opacity: 0;
   }
 }
-@keyframes slider {}
+@keyframes slider_menu {
+  from {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes appear_elementsmenu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  animation: fader-background 4s forwards;
+}
+.loader .logo {
+  animation: bigger 1.5s 1.5s forwards;
+}
+
+.fork {
+  animation: fork 3s forwards;
+}
+
+.knife {
+  animation: knife 3s forwards;
+}
+
+.circle {
+  animation: fillcircle 3s forwards;
+}
+
+.recipes:first-child {
+  opacity: 0;
+  animation: slider_menu 0.3s forwards;
+}
+.recipes:first-child .first-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 0.3s forwards;
+}
+.recipes:first-child .secund-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 0.4s forwards;
+}
+.recipes:first-child .third-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 0.5s forwards;
+}
+.recipes:first-child .fourth-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 0.6s forwards;
+}
+
+.recipes:nth-child(2) {
+  opacity: 0;
+  animation: slider_menu 0.3s 0.7s forwards;
+}
+.recipes:nth-child(2) .first-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1s forwards;
+}
+.recipes:nth-child(2) .secund-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.1s forwards;
+}
+.recipes:nth-child(2) .third-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.2s forwards;
+}
+.recipes:nth-child(2) .fourth-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.3s forwards;
+}
+
+.recipes:last-child {
+  opacity: 0;
+  animation: slider_menu 0.3s 1.4s forwards;
+}
+.recipes:last-child .first-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.7s forwards;
+}
+.recipes:last-child .secund-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.8s forwards;
+}
+.recipes:last-child .third-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 1.9s forwards;
+}
+.recipes:last-child .fourth-choice {
+  opacity: 0;
+  animation: appear_elementsmenu 0.2s 2s forwards;
+}
+
 .loader {
   width: 100vw;
   height: 100vh;
@@ -211,10 +294,6 @@
   gap: 40px;
   margin: auto;
   z-index: 9999;
-  animation: fader-background 4s forwards;
-}
-.loader .logo {
-  animation: bigger 1.5s 1.5s forwards;
 }
 
 .table2 {
@@ -225,7 +304,6 @@
   height: 120px;
   position: relative;
   right: 15px;
-  animation: fork 3s forwards;
 }
 .table2 .knife {
   height: 120px;
@@ -234,25 +312,6 @@
   animation: knife 3s forwards;
 }
 
-/*.plate {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 10px $white solid;
-  position: absolute;
-  transform: rotate(45deg);
-  box-sizing: border-box;
-}
-
-.plate::before {
-  content: "";
-  position: absolute;
-  box-sizing: border-box;
-  inset: -10px;
-  border-radius: 50%;
-  border: 25px solid $black;
-  animation: fillplate 1.5s forwards;
-}*/
 .plate {
   width: 120px;
   height: 120px;
@@ -266,7 +325,6 @@
   border-radius: 50%;
   position: relative;
   background: white;
-  animation: fillcircle 3s forwards;
 }
 .plate .round {
   width: 75px;
@@ -325,8 +383,7 @@ section {
 h1 {
   font-size: 1.4em;
   font-weight: 700;
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 20px;
 }
 
 p {
@@ -356,9 +413,6 @@ a {
     justify-content: center;
     gap: 50px;
   }
-  .restaurant__list a {
-    width: 45%;
-  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   section {
@@ -377,9 +431,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-  }
-  .restaurant__list a {
-    width: 45%;
   }
 }
 header {
@@ -468,42 +519,82 @@ header .header__location input {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 
-.restaurant__rate {
+/* .restaurant__rate {
   display: flex;
   position: relative;
   right: 2em;
   align-self: center;
   width: 30px;
   height: 30px;
-}
-.restaurant__rate span {
-  border: none;
-  position: relative;
+
+  span {
+    border: none;
+    position: relative;
+    align-self: center;
+    background-color: $white;
+    padding: 0;
+
+    .fa-heart {
+      font-size: 2em;
+    }
+
+    .fa-regular {
+      display: flex;
+      position: absolute;
+      background-color: $white;
+      color: $black;
+      z-index: 1;
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+
+    .fa-regular:hover {
+      opacity: 0;
+    }
+
+    .fa-solid {
+      display: flex;
+      color: transparent;
+      background-image: linear-gradient($second-color, $first-color);
+      background-clip: text;
+    }
+  }
+} */
+.restaurant__rate2 {
+  display: flex;
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
   align-self: center;
-  background-color: #ffffff;
-  padding: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  align-self: center;
+  background-color: transparent;
+  z-index: 2;
 }
-.restaurant__rate span .fa-heart {
-  font-size: 2em;
+.restaurant__rate2 .fa-heart {
+  font-size: 2.3em;
 }
-.restaurant__rate span .fa-regular {
+.restaurant__rate2 .fa-regular {
   display: flex;
   position: absolute;
   background-color: #ffffff;
   color: #000000;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.4s;
+  transition: opacity 0.4s ease-in-out;
 }
-.restaurant__rate span .fa-regular:hover {
+.restaurant__rate2 .fa-regular:hover {
   opacity: 0;
 }
-.restaurant__rate span .fa-solid {
+.restaurant__rate2 .fa-solid {
   display: flex;
   color: transparent;
   background-image: linear-gradient(#ff79da, #9256dc);
   -webkit-background-clip: text;
           background-clip: text;
+  padding: 0;
 }
 
 .howto__card {
@@ -567,7 +658,13 @@ header .header__location input {
   }
 }
 
-.restaurant__card {
+.card__container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+}
+.card__container .restaurant__card {
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -577,44 +674,55 @@ header .header__location input {
   height: 250px;
   overflow: hidden;
   justify-content: space-between;
+  flex-shrink: 0;
+  position: relative;
   transition: all ease-in-out 0.4s;
 }
-.restaurant__card .restaurant__photo {
+.card__container .restaurant__card .restaurant__photo {
   width: 100%;
   max-height: 275px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
 }
-.restaurant__card .restaurant__photo img {
+.card__container .restaurant__card .restaurant__photo img {
   width: 100%;
+  display: flex;
+  flex-shrink: 0;
   height: -moz-fit-content;
   height: fit-content;
   align-self: center;
 }
-.restaurant__card .restaurant__card-content {
+.card__container .restaurant__card .restaurant__card-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 70px;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 10px;
   gap: 10px;
 }
-.restaurant__card .restaurant__card-content h3 {
+.card__container .restaurant__card .restaurant__card-content h3 {
   font-size: 1.2em;
   font-weight: 700;
   color: #000000;
   margin: 0;
+  text-align: start;
 }
-.restaurant__card .restaurant__card-content p {
+.card__container .restaurant__card .restaurant__card-content p {
   font-family: Roboto;
   font-weight: 500;
   font-weight: 300;
   color: #000000;
   text-align: start;
+  margin: 10px 0;
 }
-.restaurant__card:hover {
+.card__container .restaurant__card:hover {
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2549019608);
+}
+@media (min-width: 768px) {
+  .card__container {
+    width: 45%;
+  }
 }
 
 footer {
@@ -709,7 +817,7 @@ footer .info .info__contact {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px;
 }
 .restaurant__menu .restaurant__info h1 {
@@ -719,10 +827,13 @@ footer .info .info__contact {
   font-weight: 500;
   margin: 0;
 }
-.restaurant__menu .restaurant__info .restaurant__rate span {
-  background-color: #f6f6f6;
+.restaurant__menu .restaurant__info .restaurant__rate2 {
+  position: relative;
+  padding-left: 30px;
+  right: 0;
+  bottom: 0;
 }
-.restaurant__menu .restaurant__info .restaurant__rate span .fa-regular {
+.restaurant__menu .restaurant__info .restaurant__rate2 .fa-regular {
   background-color: #f6f6f6;
 }
 .restaurant__menu .navigation {
@@ -794,6 +905,8 @@ footer .info .info__contact {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
   height: 70px;
   overflow: hidden;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
 }
 .recipes__choice .recipes__choice--extend {
   background-color: #ffffff;
@@ -804,7 +917,7 @@ footer .info .info__contact {
   display: grid;
   grid-template-columns: 70% 15% 15%;
   align-items: center;
-  transition: width 0.4s;
+  transition: width 0.3s ease-in-out;
 }
 .recipes__choice .recipes__choice--extend .recipes__text {
   display: flex;
@@ -838,8 +951,9 @@ footer .info .info__contact {
   line-height: 70px;
 }
 .recipes__choice .recipes__choice--extend:hover {
-  width: 100%;
+  width: 101%;
 }
 .recipes__choice:hover {
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.2549019608);
+  transition: ease-in-out 0.3s;
 }/*# sourceMappingURL=index.css.map */

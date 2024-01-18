@@ -3,98 +3,89 @@ body {
     margin: 0;
 }
 
-.fa-solid{
+.fa-solid {
     @include tall;
     padding: 0 10px 0 0;
     color: $dark-grey;
-  }
+}
 
-.main__container{
+.main__container {
     @include boxbasic;
     @include column;
     margin: 0;
     text-align: center;
 }
 
-.section__bgd{
+.section__bgd {
     @include boxbasic;
     @include column;
     background-color: $light-grey;
-    margin: 0;    
+    margin: 0;
     height: auto;
 }
 
-section{
+section {
     @include boxbasic;
     padding: 15px;
 }
 
-.restaurant__list{
+.restaurant__list {
     @include boxbasic;
     @include column;
     gap: 18px;
 }
 
-h1{
+h1 {
     @include tall;
     @include fat;
-    margin: 0;
-    margin-bottom: 40px;
+    margin: 20px;
 }
 
-p{
+p {
     @include medium;
     @include thin;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-    //  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
-@media (min-width : 1024px) {
-    section{
+//  ***   MEDIA QUERIES DESKTOP    ***   MEDIA QUERIES DESKTOP  ***
+@media (min-width: 1024px) {
+    section {
         padding: 50px 80px;
     }
 
-    .howto{
+    .howto {
         @include boxbasic;
         @include row;
         justify-content: space-between;
     }
 
-    .restaurant__list{
+    .restaurant__list {
         @include row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 50px;
-
-        a{
-            width: 45%;
-        }
     }
 }
 
 //  ***   MEDIA QUERIES TABLETTE    ***   MEDIA QUERIES TABLETTE  ***
-    @media (min-width : 768px) and (max-width: 1024px) {
-   
-        section{
+@media (min-width: 768px) and (max-width: 1024px) {
+    section {
         padding: 30px 30px;
     }
-    .howto{
+
+    .howto {
         @include boxbasic;
         @include column;
         justify-content: space-between;
-
     }
-    
-    .restaurant__list{
+
+    .restaurant__list {
         @include row;
         flex-wrap: wrap;
         justify-content: center;
         gap: 25px;
-
-        a{
-            width: 45%;
-        }
-    }}
+    }
+}
