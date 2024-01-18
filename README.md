@@ -18,6 +18,6 @@ Il n’y a plus qu’à le développer pour mobile, tablette et desktop en s’a
 
 
 
-Validation HTML :
+Validation HTML : ok
 Validation CSS : ok
 
