@@ -35,10 +35,15 @@ section {
     gap: 18px;
 }
 
-h1 {
+h1 h2 {
     @include tall;
     @include fat;
     margin: 20px;
+}
+
+h2 {
+    text-align: left;
+    padding :10px; 
 }
 
 p {
@@ -65,7 +70,7 @@ a {
     .restaurant__list {
         @include row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         gap: 50px;
     }
 }
